@@ -1,0 +1,773 @@
+/*
+ Theme Name:   Dubai Xtra
+ Theme URI:    https://dubaixtra.com
+ Description:  Dubai Xtra editorial theme — GeneratePress Premium child theme. Clean editorial design for reviews, spotlights, best lists, things to do, guides, and business directory.
+ Author:       Pay Per Click Ireland
+ Author URI:   https://payperclick.ie
+ Template:     generatepress
+ Version:      1.0.0
+ License:      Private
+ Text Domain:  dubai-xtra
+*/
+
+/* ═══ CSS VARIABLES ═══ */
+:root {
+  --dx-navy: #1A1A2E;
+  --dx-gold: #C9A84C;
+  --dx-warm-white: #FAFAF8;
+  --dx-text: #2D2D2D;
+  --dx-light-grey: #F0EFEB;
+  --dx-mid-grey: #888888;
+  --dx-verified: #4A7C59;
+  --dx-white: #FFFFFF;
+  --dx-gold-hover: #B8933F;
+  --dx-navy-light: #2A2A4E;
+}
+
+/* ═══ GLOBAL ═══ */
+body {
+  background-color: var(--dx-warm-white);
+  color: var(--dx-text);
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ═══ TYPOGRAPHY ═══ */
+h1, h2, h3, h4, h5, h6,
+.editorial-heading {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--dx-navy);
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+
+.section-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--dx-gold);
+  display: block;
+}
+
+.gold-line {
+  width: 40px;
+  height: 2px;
+  background: var(--dx-gold);
+  margin-bottom: 16px;
+}
+
+/* ═══ LINKS ═══ */
+a {
+  color: var(--dx-navy);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--dx-gold);
+}
+
+/* ═══ NAVIGATION OVERRIDES ═══ */
+.main-navigation a,
+.menu-toggle {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--dx-navy);
+}
+
+.main-navigation a:hover {
+  color: var(--dx-gold);
+}
+
+.site-header {
+  background: var(--dx-warm-white);
+  border-bottom: 1px solid var(--dx-light-grey);
+}
+
+/* ═══ SITE BRANDING ═══ */
+.site-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--dx-navy);
+  letter-spacing: -0.02em;
+}
+
+.site-title .xtra {
+  font-weight: 400;
+  font-style: italic;
+  color: var(--dx-gold);
+}
+
+/* ═══ BUTTONS ═══ */
+.dx-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  border: none;
+}
+
+.dx-btn-primary {
+  background: var(--dx-navy);
+  color: var(--dx-gold);
+}
+
+.dx-btn-primary:hover {
+  background: var(--dx-navy-light);
+  color: var(--dx-gold);
+}
+
+.dx-btn-outline {
+  background: transparent;
+  border: 2px solid var(--dx-navy);
+  color: var(--dx-navy);
+}
+
+.dx-btn-outline:hover {
+  background: var(--dx-navy);
+  color: var(--dx-gold);
+}
+
+.dx-btn-gold {
+  background: var(--dx-gold);
+  color: var(--dx-navy);
+}
+
+.dx-btn-gold:hover {
+  background: var(--dx-gold-hover);
+  color: var(--dx-navy);
+}
+
+/* ═══ TAGS & PILLS ═══ */
+.dx-tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.dx-tag-gold {
+  background: var(--dx-gold);
+  color: var(--dx-navy);
+}
+
+.dx-tag-navy {
+  background: var(--dx-navy);
+  color: var(--dx-white);
+}
+
+.dx-tag-sponsored {
+  background: rgba(201, 168, 76, 0.9);
+  color: var(--dx-navy);
+}
+
+.dx-tag-verified {
+  background: var(--dx-verified);
+  color: var(--dx-white);
+  font-size: 10px;
+}
+
+/* ═══ SCORE BADGE ═══ */
+.dx-score {
+  background: var(--dx-navy);
+  color: var(--dx-gold);
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 18px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dx-score-sm {
+  width: 40px;
+  height: 40px;
+  font-size: 15px;
+}
+
+/* ═══ CARDS ═══ */
+.dx-card {
+  background: var(--dx-white);
+  border: 1px solid var(--dx-light-grey);
+  border-radius: 2px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dx-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+.dx-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.dx-card-body {
+  padding: 20px;
+}
+
+.dx-card-meta {
+  font-size: 11px;
+  color: var(--dx-gold);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ═══ CATEGORY CARDS ═══ */
+.dx-category-card {
+  background: var(--dx-white);
+  border: 1px solid var(--dx-light-grey);
+  padding: 20px 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border-radius: 2px;
+}
+
+.dx-category-card:hover {
+  border-color: var(--dx-gold);
+  background: #FFFDF5;
+}
+
+/* ═══ LISTING ROWS ═══ */
+.dx-listing-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--dx-light-grey);
+  transition: all 0.2s ease;
+}
+
+.dx-listing-row:hover {
+  background: #FFFDF5;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* ═══ THINGS TO DO CARDS ═══ */
+.dx-ttd-card {
+  background: var(--dx-white);
+  border: 1px solid var(--dx-light-grey);
+  border-radius: 2px;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.dx-ttd-card:hover {
+  border-color: var(--dx-gold);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* ═══ SPOTLIGHT SECTIONS ═══ */
+.dx-spotlight-stats {
+  display: flex;
+  gap: 24px;
+}
+
+.dx-spotlight-stat-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--dx-navy);
+}
+
+.dx-spotlight-stat-label {
+  font-size: 10px;
+  color: var(--dx-mid-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+.dx-standout-box {
+  background: var(--dx-warm-white);
+  border: 1px solid var(--dx-light-grey);
+  border-radius: 2px;
+  padding: 16px;
+}
+
+/* ═══ BLOCKQUOTE (SPOTLIGHT PULL QUOTES) ═══ */
+blockquote,
+.dx-pull-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-style: italic;
+  color: var(--dx-navy);
+  line-height: 1.5;
+  border-left: 3px solid var(--dx-gold);
+  padding-left: 20px;
+  margin: 24px 0;
+}
+
+/* ═══ SECTIONS ═══ */
+.dx-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 24px;
+}
+
+.dx-section-dark {
+  background: var(--dx-navy);
+  color: var(--dx-white);
+}
+
+.dx-section-white {
+  background: var(--dx-white);
+  border-top: 1px solid var(--dx-light-grey);
+  border-bottom: 1px solid var(--dx-light-grey);
+}
+
+.dx-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+/* ═══ REVIEW SINGLE TEMPLATE ═══ */
+.dx-review-hero {
+  position: relative;
+  min-height: 460px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.dx-review-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 30%, rgba(26, 26, 46, 0.9));
+}
+
+.dx-review-hero-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 32px;
+}
+
+.dx-review-sections {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.dx-review-section {
+  margin-bottom: 48px;
+}
+
+.dx-review-section h3 {
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--dx-light-grey);
+}
+
+.dx-review-sidebar {
+  background: var(--dx-white);
+  border: 1px solid var(--dx-light-grey);
+  border-radius: 2px;
+  padding: 24px;
+  position: sticky;
+  top: 100px;
+}
+
+/* ═══ DIRECTORY SINGLE ═══ */
+.dx-listing-header {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.dx-listing-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border: 1px solid var(--dx-light-grey);
+  border-radius: 2px;
+  padding: 8px;
+}
+
+.dx-listing-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.dx-listing-detail-label {
+  font-size: 11px;
+  color: var(--dx-mid-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+/* ═══ ARCHIVE GRIDS ═══ */
+.dx-archive-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.dx-archive-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* ═══ NEWSLETTER FORM ═══ */
+.dx-newsletter-form {
+  display: flex;
+  gap: 8px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.dx-newsletter-input {
+  flex: 1;
+  padding: 14px 20px;
+  border: 1px solid #E0DED8;
+  border-radius: 2px;
+  outline: none;
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.dx-newsletter-input:focus {
+  border-color: var(--dx-gold);
+}
+
+/* ═══ FOOTER ═══ */
+.site-footer {
+  background: var(--dx-navy);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+
+.site-footer a {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.site-footer a:hover {
+  color: var(--dx-gold);
+}
+
+.dx-footer-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--dx-gold);
+  margin-bottom: 16px;
+  display: block;
+}
+
+/* ═══ SEARCH BAR ═══ */
+.dx-search-bar {
+  display: flex;
+  max-width: 480px;
+  margin: 0 auto;
+  border: 1px solid #E0DED8;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.dx-search-bar input {
+  flex: 1;
+  padding: 14px 20px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  background: var(--dx-white);
+}
+
+.dx-search-bar button {
+  padding: 14px 24px;
+  background: var(--dx-navy);
+  color: var(--dx-gold);
+  border: none;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ═══ SPONSORED FEATURE WIDGET ═══ */
+/* Site-wide monetisation slot. Lives in sidebars on review/listing/guide
+   templates and inside an inline .dx-sponsored-section on the others. */
+.dx-sponsored-widget {
+  background: var(--dx-white);
+  border: 1px solid var(--dx-light-grey);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 1.5rem;
+}
+.dx-sponsored-label {
+  display: block;
+  background: var(--dx-gold);
+  color: var(--dx-navy);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.55rem 1rem;
+  text-align: center;
+}
+.dx-sponsored-card {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+.dx-sponsored-card:hover {
+  background: #FFFDF5;
+  color: inherit;
+}
+.dx-sponsored-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+.dx-sponsored-body {
+  padding: 1.1rem 1.25rem 1.25rem;
+}
+.dx-sponsored-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.dx-sponsored-meta h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  margin: 0;
+  line-height: 1.25;
+  color: var(--dx-navy);
+}
+.dx-sponsored-body p {
+  font-size: 0.875rem;
+  color: var(--dx-mid-grey);
+  line-height: 1.5;
+  margin: 0.5rem 0 0.85rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.dx-sponsored-cta {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dx-gold);
+}
+.dx-sponsored-card:hover .dx-sponsored-cta {
+  color: var(--dx-gold-hover);
+}
+
+/* Inline section wrapper for templates without sidebars */
+.dx-sponsored-section {
+  max-width: 480px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+}
+.dx-sponsored-section .dx-sponsored-widget {
+  margin-top: 0;
+}
+
+/* ═══ MOBILE CTA BAR ═══ */
+/* Sits above the GP header on viewports up to 1024px. Hidden on desktop. */
+.dx-mobile-cta-bar {
+  display: none;
+  width: 100%;
+  background: var(--dx-gold);
+  color: var(--dx-navy);
+  text-align: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.85rem 1rem;
+  text-decoration: none;
+  line-height: 1.2;
+}
+.dx-mobile-cta-bar:hover,
+.dx-mobile-cta-bar:focus {
+  background: var(--dx-gold-hover);
+  color: var(--dx-navy);
+}
+
+/* ═══ HAMBURGER MENU AT 1024px ═══ */
+/* Force the mobile menu pattern (hamburger toggle + collapsed list) up
+   to 1024px so the 6-item nav stops wrapping on tablets. GP's existing
+   .toggled JS handler still works at this width. */
+@media (max-width: 1024px) {
+  .dx-mobile-cta-bar { display: block; }
+
+  .main-navigation .menu-toggle,
+  .main-navigation .mobile-menu-control-wrapper {
+    display: flex !important;
+  }
+  .main-navigation .main-nav,
+  .main-navigation .main-nav > ul {
+    display: none;
+  }
+  .main-navigation.toggled .main-nav,
+  .main-navigation.toggled .main-nav > ul {
+    display: block;
+    width: 100%;
+  }
+  .main-navigation.toggled .main-nav ul {
+    flex-direction: column;
+  }
+  .main-navigation.toggled .main-nav > ul > li {
+    width: 100%;
+  }
+  /* Hide the menu CTA on mobile - the dx-mobile-cta-bar above the
+     header replaces it so we do not show two Submit buttons. */
+  .main-navigation .main-nav ul li.dx-menu-cta {
+    display: none;
+  }
+}
+
+/* ═══ MENU CTA BUTTON ═══ */
+/* Pushes the "Submit a Listing" item to the right + styles it as a gold button. */
+.main-navigation .main-nav ul li.dx-menu-cta {
+  margin-left: auto;
+}
+.main-navigation .main-nav ul li.dx-menu-cta > a {
+  background: var(--dx-gold);
+  color: var(--dx-navy);
+  padding: 0.6rem 1.25rem;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  border-radius: 2px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  transition: background 0.2s ease;
+}
+.main-navigation .main-nav ul li.dx-menu-cta > a:hover,
+.main-navigation .main-nav ul li.dx-menu-cta.current-menu-item > a {
+  background: var(--dx-gold-hover);
+  color: var(--dx-navy);
+}
+
+@media (max-width: 768px) {
+  .main-navigation .main-nav ul li.dx-menu-cta {
+    margin-left: 0;
+  }
+  .main-navigation .main-nav ul li.dx-menu-cta > a {
+    margin: 0;
+    border-radius: 0;
+  }
+}
+
+/* ═══ FULL-WIDTH TEMPLATE OVERRIDE ═══ */
+/* For front page + custom singles + CPT archives. The .dx-section wrapper
+   inside each template enforces its own 1200px max-width, so we just need
+   to nuke GP's outer container constraints and per-article padding. */
+body.dx-full-width #page,
+body.dx-full-width .site-content {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body.dx-full-width #primary,
+body.dx-full-width #main,
+body.dx-full-width main#main {
+  padding: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+body.dx-full-width article,
+body.dx-full-width .inside-article {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+}
+
+body.dx-full-width .entry-header,
+body.dx-full-width .entry-meta,
+body.dx-full-width .entry-footer {
+  display: none;
+}
+
+body.dx-full-width .entry-content {
+  margin: 0;
+}
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 768px) {
+  h1 { font-size: 2.25rem; }
+  h2 { font-size: 1.5rem; }
+
+  .dx-archive-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dx-archive-grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .dx-listing-details {
+    grid-template-columns: 1fr;
+  }
+
+  .dx-spotlight-stats {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .dx-newsletter-form {
+    flex-direction: column;
+  }
+
+  .dx-search-bar {
+    flex-direction: column;
+  }
+
+  .dx-search-bar button {
+    width: 100%;
+  }
+}

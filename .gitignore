@@ -1,0 +1,106 @@
+# ════════════════════════════════════════════════════════════════════
+# DUBAI XTRA - .gitignore
+#
+# Repo root = WordPress install root.
+# When Cloudways pulls this repo into public_html/, the theme files
+# land at public_html/wp-content/themes/dubai-xtra-child/ automatically
+# with no deploy script. WordPress core, third-party plugins, the
+# parent theme, uploads, caches, and logs are all server-managed and
+# never enter the repo.
+#
+# Strategy: deny everything by default, then explicitly un-ignore the
+# bits we own (custom theme + project docs + future custom plugins).
+#
+# Audit performed against the actual project tree on 2026-05-01.
+# ════════════════════════════════════════════════════════════════════
+
+# ─── Default: ignore everything ─────────────────────────────────────
+/*
+/.*
+
+# ─── Re-include root project files ──────────────────────────────────
+!.gitignore
+!.gitattributes
+!.editorconfig
+!.github/
+!CLAUDE.md
+!README.md
+!LICENSE
+!composer.json
+!composer.lock
+!package.json
+!package-lock.json
+
+# ─── Walk into wp-content -> themes -> our theme ────────────────────
+# Each level is un-ignored explicitly so git recurses into it. Inside
+# each level we re-deny everything else so siblings (default themes,
+# third-party plugins, uploads, etc.) stay out.
+!/wp-content/
+/wp-content/*
+!/wp-content/themes/
+/wp-content/themes/*
+!/wp-content/themes/dubai-xtra-child/
+
+# Once we're inside our theme, everything is tracked by default.
+# Defensive excludes for build tooling / editor junk / logs are below.
+
+# ─── Custom mu-plugins (allow if/when we add any) ───────────────────
+!/wp-content/mu-plugins/
+
+# ─── Custom plugins (uncomment + add path when we build one) ────────
+# !/wp-content/plugins/dubai-xtra-core/
+
+# ════════════════════════════════════════════════════════════════════
+# DEFENSIVE EXCLUDES
+# Things we never want committed even when they appear inside an
+# otherwise-allowed path (e.g. node_modules inside the theme).
+# ════════════════════════════════════════════════════════════════════
+
+# ─── Editor + OS junk ───────────────────────────────────────────────
+**/.DS_Store
+**/Thumbs.db
+**/desktop.ini
+**/.vscode/
+**/.idea/
+**/.vs/
+**/*.code-workspace
+**/*.sublime-project
+**/*.sublime-workspace
+**/*.swp
+**/*.swo
+**/*~
+
+# ─── Build artifacts / dependency dirs ──────────────────────────────
+**/node_modules/
+**/vendor/
+**/dist/
+**/build/
+**/.cache/
+**/.parcel-cache/
+**/.next/
+**/.nuxt/
+
+# ─── Logs ───────────────────────────────────────────────────────────
+**/*.log
+**/debug.log
+**/error_log
+**/error.log
+
+# ─── Env + secrets ──────────────────────────────────────────────────
+**/.env
+**/.env.local
+**/.env.*.local
+**/*.pem
+**/*.key
+
+# ─── Test snapshots / coverage ──────────────────────────────────────
+**/coverage/
+**/.nyc_output/
+**/__snapshots__/
+
+# ─── ACF local JSON sync ────────────────────────────────────────────
+# No acf-json/ folder exists in the theme today (we register fields
+# programmatically via inc/acf-fields.php). If you later enable ACF's
+# local JSON sync, the acf-json/ folder under the theme is ALREADY
+# allowed by the theme un-ignore above. Field group definitions belong
+# in version control.
