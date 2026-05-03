@@ -19,6 +19,7 @@ function dx_register_acf_fields() {
     acf_add_local_field_group([
         'key'      => 'group_dx_review',
         'title'    => 'Review Details',
+        'show_in_rest' => 1,
         'location' => [[[
             'param'    => 'post_type',
             'operator' => '==',
@@ -61,6 +62,7 @@ function dx_register_acf_fields() {
     acf_add_local_field_group([
         'key'      => 'group_dx_best_list',
         'title'    => 'Best List Details',
+        'show_in_rest' => 1,
         'location' => [[[
             'param'    => 'post_type',
             'operator' => '==',
@@ -89,6 +91,7 @@ function dx_register_acf_fields() {
     acf_add_local_field_group([
         'key'      => 'group_dx_owner_spotlight',
         'title'    => 'Owner Spotlight Details',
+        'show_in_rest' => 1,
         'location' => [[[
             'param'    => 'post_type',
             'operator' => '==',
@@ -121,6 +124,7 @@ function dx_register_acf_fields() {
     acf_add_local_field_group([
         'key'      => 'group_dx_business_spotlight',
         'title'    => 'Business Spotlight Details',
+        'show_in_rest' => 1,
         'location' => [[[
             'param'    => 'post_type',
             'operator' => '==',
@@ -165,6 +169,7 @@ function dx_register_acf_fields() {
     acf_add_local_field_group([
         'key'      => 'group_dx_things_to_do',
         'title'    => 'Things To Do Details',
+        'show_in_rest' => 1,
         'location' => [[[
             'param'    => 'post_type',
             'operator' => '==',
@@ -198,6 +203,7 @@ function dx_register_acf_fields() {
     acf_add_local_field_group([
         'key'      => 'group_dx_guide',
         'title'    => 'Guide Details',
+        'show_in_rest' => 1,
         'location' => [[[
             'param'    => 'post_type',
             'operator' => '==',
@@ -232,6 +238,7 @@ function dx_register_acf_fields() {
     acf_add_local_field_group([
         'key'      => 'group_dx_listing',
         'title'    => 'Listing Details',
+        'show_in_rest' => 1,
         'location' => [[[
             'param'    => 'post_type',
             'operator' => '==',
