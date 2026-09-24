@@ -10,9 +10,16 @@ if (source.protocol !== 'https:' || source.username || source.password) throw Er
 const allowedHosts = new Set([source.host, 'dubaixtra.com', 'www.dubaixtra.com']);
 const pages = new Map(), assets = new Map(), pending = new Set(['/']);
 const done = new Set();
+const buildRevision = Date.now().toString();
 const remove = n => { if(n.parent) n.parent.children = n.parent.children.filter(c => c !== n); };
 function localURL(value, base = source) {
-  try { const u = new URL(value.replaceAll('&amp;', '&'), base); return allowedHosts.has(u.host) ? u : null; } catch { return null; }
+  try {
+    const u = new URL(value.replaceAll('&amp;', '&'), base);
+    if (!allowedHosts.has(u.host)) return null;
+    // WordPress carries query arguments into archive pagination links.
+    u.searchParams.delete('_dx_build');
+    return u;
+  } catch { return null; }
 }
 function pagePath(value) {
   const u = localURL(value);
@@ -28,9 +35,12 @@ function asset(value, base = source) {
   }
   return u.pathname + u.search + u.hash;
 }
-function css(text, base) { return text.replace(/url\(\s*(['"]?)([^)'"\s]+)\1\s*\)/g, (_,q,u) => `url("${asset(u,base)}")`); }
+function css(text, base) { return text.replace(/url\(\s*(['"]?)([^)'"\s]+)\1\s*\)/g, (_,q,u) => `url('${asset(u,base).replaceAll("'", '%27')}')`); }
 async function get(route) {
   let url = new URL(route, source);
+  // Cloudways may still cache the previous published HTML after a WP save.
+  // Fetch fresh anonymous pages for this build while retaining stable asset URLs.
+  if (!/^\/(?:wp-content|wp-includes)\//.test(url.pathname)) url.searchParams.set('_dx_build', buildRevision);
   for(let redirects=0; redirects<5; redirects++) {
     if(url.origin !== source.origin) throw Error('Unexpected origin redirect: '+url.origin);
     const r = await fetch(url, { redirect:'manual', signal:AbortSignal.timeout(45000), headers:{'User-Agent':'DubaiXtra-PublicBuild/1.0'} });
