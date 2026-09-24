@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Dubai Xtra Pages Publishing
  * Description: Rebuild the public Cloudflare site when published WordPress content changes.
- * Version: 1.0.0
+ * Version: 1.0.1
  */
 defined('ABSPATH') || exit;
 
@@ -11,6 +11,19 @@ defined('ABSPATH') || exit;
 if (strtolower($_SERVER['HTTP_HOST'] ?? '') === 'cms.dubaixtra.com') {
     add_filter('option_home', function () { return 'https://cms.dubaixtra.com'; });
     add_filter('option_siteurl', function () { return 'https://cms.dubaixtra.com'; });
+    // Plugin/content constants may be set before this regular plugin loads.
+    // Keep editor assets on WordPress instead of the public static frontend.
+    $cms_asset_url = function ($url) {
+        return preg_replace('~^https?://(?:www\.)?dubaixtra\.com(?=/|$)~i', 'https://cms.dubaixtra.com', $url);
+    };
+    foreach (['content_url', 'plugins_url', 'script_loader_src', 'style_loader_src', 'theme_file_uri'] as $hook) {
+        add_filter($hook, $cms_asset_url);
+    }
+    add_filter('upload_dir', function ($uploads) use ($cms_asset_url) {
+        $uploads['url'] = $cms_asset_url($uploads['url']);
+        $uploads['baseurl'] = $cms_asset_url($uploads['baseurl']);
+        return $uploads;
+    });
     add_action('send_headers', function () { header('X-Robots-Tag: noindex, nofollow'); });
     add_filter('wp_mail_from', function ($from) {
         return str_replace('@cms.dubaixtra.com', '@dubaixtra.com', $from);
