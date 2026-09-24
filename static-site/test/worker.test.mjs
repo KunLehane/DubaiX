@@ -32,3 +32,9 @@ test('successful submission redirects back to public confirmation page',async(t)
   const r=await worker.fetch(new Request('https://dubaixtra.com/wp-admin/admin-post.php',{method:'POST',headers:{origin:'https://dubaixtra.com'},body:new URLSearchParams({action:'dx_submit_listing'})}),env);
   assert.equal(r.headers.get('location'),'https://dubaixtra.com/submit-listing/?dx_submitted=1#submit-form-section');
 });
+
+test('search uses the built index so Git-only posts are included',async()=>{
+ let target;
+ const r=await worker.fetch(new Request('https://dubaixtra.com/?s=Five+Iron'),{...env,ASSETS:{fetch:async(req)=>{target=req.url;return new Response('search');}}});
+ assert.equal(new URL(target).pathname,'/search/');assert.equal(new URL(target).searchParams.get('s'),'Five Iron');assert.equal(await r.text(),'search');
+});

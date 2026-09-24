@@ -7,7 +7,7 @@ export default {
     if(backend && (backend.protocol!=='https:' || backend.origin===url.origin)) return new Response('Invalid backend configuration',{status:503});
     const isAdmin=/^\/(?:wp-admin(?:\/|$)|wp-login\.php)/.test(url.pathname) && url.pathname!=='/wp-admin/admin-post.php';
     if(isAdmin) return backend ? Response.redirect(new URL(url.pathname+url.search,backend),302) : new Response('Admin connection pending',{status:503});
-    const dynamic=url.pathname==='/submit-listing/' || url.pathname==='/wp-admin/admin-post.php' || url.pathname==='/wp-comments-post.php' || url.searchParams.has('s') || url.searchParams.has('comments');
+    const dynamic=url.pathname==='/submit-listing/' || url.pathname==='/wp-admin/admin-post.php' || url.pathname==='/wp-comments-post.php' || url.searchParams.has('comments');
     if(dynamic) {
       if(!backend) return new Response('Submissions are being connected. Please try again shortly.',{status:503});
       if(!['GET','HEAD','POST'].includes(request.method)) return new Response('Method not allowed',{status:405});
@@ -43,7 +43,8 @@ export default {
       return new Response(upstream.body,{status:upstream.status,headers:out});
     }
     if(!['GET','HEAD'].includes(request.method))return new Response('Method not allowed',{status:405});
-    const response=await env.ASSETS.fetch(request);
+    if(url.searchParams.has('s')) url.pathname='/search/';
+    const response=await env.ASSETS.fetch(new Request(url,request));
     const result=new Response(response.body,response);
     if(!PUBLIC_HOSTS.has(url.host))result.headers.set('x-robots-tag','noindex, nofollow');
     return result;
