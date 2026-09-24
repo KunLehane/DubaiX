@@ -1,1 +1,2 @@
-{"name":"dubaixtra","private":true,"type":"module","scripts":{"build":"node build.mjs","build:live":"node refresh.mjs","test":"node --test --test-isolation=none test/*.test.mjs"},"dependencies":{"ultrahtml":"1.7.0"}}
+{"name":"dubaixtra","private":true,"type":"module","scripts":{"build":"node build.mjs","build:live":"node refresh.mjs","test":"node test/worker.test.mjs"},"dependencies":{"ultrahtml":"1.7.0"}}
+
