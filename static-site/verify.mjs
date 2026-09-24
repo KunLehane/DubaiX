@@ -1,0 +1,5 @@
+import fs from 'node:fs/promises';import path from 'node:path';import assert from 'node:assert/strict';
+const pages=JSON.parse(await fs.readFile('src/pages.json','utf8'));
+const routes=new Set(pages.map(p=>p.path));const missing=[];let forms=0;
+for(const p of pages){const h=await fs.readFile(path.join('dist',p.path,'index.html'),'utf8');assert(!/admin-ajax\.php|elementorFrontendConfig|elementorProFrontendConfig/.test(h));for(const match of h.matchAll(/(?:src|href)=["'](\/[^"'#?]*)(?:[?#][^"']*)?["']/g)){const ref=decodeURIComponent(match[1]);if(ref==='/'||ref.startsWith('//')||ref==='/api/enquiry')continue;if(ref.startsWith('/wp-content/')||/\.[a-z0-9]+$/i.test(ref)){try{await fs.access(path.join('dist',ref))}catch{missing.push([p.path,ref])}}else if(!routes.has(ref))missing.push([p.path,ref]);}forms+=(h.match(/data-enquiry-form/g)||[]).length;}
+console.log(JSON.stringify({pages:pages.length,forms,missing:[...new Map(missing.map(x=>[x.join('|'),x])).values()]},null,2));if(missing.length)process.exitCode=1;
