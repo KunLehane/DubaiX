@@ -104,3 +104,6 @@
 # local JSON sync, the acf-json/ folder under the theme is ALREADY
 # allowed by the theme un-ignore above. Field group definitions belong
 # in version control.
+
+# Git-native Cloudflare frontend and editorial content
+!/static-site/

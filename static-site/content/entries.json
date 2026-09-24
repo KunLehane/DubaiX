@@ -1,0 +1,46 @@
+[
+  {
+    "slug": "golf-networking-breakfast-dubai",
+    "path": "/things-to-do/golf-networking-breakfast-dubai/",
+    "kind": "article",
+    "title": "Best Golf Networking Breakfast In Dubai Is Back",
+    "description": "The best golf networking breakfast in Dubai is back after the summer, with 20 already booked. Meet other business owners over simulator golf and breakfast for under AED 80.",
+    "image": "/editorial-assets/five-iron-breakfast-network.png",
+    "published": "2026-09-24",
+    "archives": [
+      {
+        "path": "/things-to-do/",
+        "title": "Things To Do"
+      },
+      {
+        "path": "/tags/golf-networking/",
+        "title": "Golf Networking"
+      },
+      {
+        "path": "/categories/golf/",
+        "title": "Golf"
+      }
+    ],
+    "content": "pages/golf-networking-breakfast-dubai.html"
+  },
+  {
+    "slug": "best-golf-networking-in-dubai-uae",
+    "path": "/best/best-golf-networking-in-dubai-uae/",
+    "kind": "best-list",
+    "title": "Best Golf Networking In Dubai UAE",
+    "description": "Explore golf networking in Dubai, including Five Iron Golf’s monthly breakfast, business golf groups and societies. Find an event and make new connections.",
+    "image": "/wp-content/uploads/2024/12/Golf-Networking-Dubai.jpg",
+    "published": "2026-09-24",
+    "archives": [
+      {
+        "path": "/best/",
+        "title": "Best Of Dubai"
+      },
+      {
+        "path": "/best-category/golf/",
+        "title": "Golf"
+      }
+    ],
+    "content": "pages/best-golf-networking-in-dubai-uae.html"
+  }
+]

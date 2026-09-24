@@ -2,6 +2,10 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { parse, renderSync, walkSync } from 'ultrahtml';
 import { querySelector, querySelectorAll } from 'ultrahtml/selector';
+import {loadEditorial,renderEditorial,renderArchive,updateEditorialCards} from './editorial.mjs';
+const editorial=await loadEditorial();
+const nativePages=new Map(editorial.entries.map(e=>[e.path,renderEditorial(e,editorial.shell)]));
+const nativeArchives=new Map(editorial.entries.flatMap(e=>e.archives).map(a=>[a.path,a]));
 
 // This exporter uses anonymous public HTML, never the WordPress database or admin API.
 const source = new URL(process.env.WORDPRESS_ORIGIN || 'https://dubaixtra.com');
@@ -9,6 +13,7 @@ const publicOrigin = 'https://dubaixtra.com';
 if (source.protocol !== 'https:' || source.username || source.password) throw Error('HTTPS origin required');
 const allowedHosts = new Set([source.host, 'dubaixtra.com', 'www.dubaixtra.com']);
 const pages = new Map(), assets = new Map(), pending = new Set(['/']);
+for(const p of [...nativePages.keys(),...nativeArchives.keys()]) pending.add(p);
 const done = new Set();
 const buildRevision = Date.now().toString();
 const remove = n => { if(n.parent) n.parent.children = n.parent.children.filter(c => c !== n); };
@@ -60,10 +65,16 @@ while(pending.size) {
   await Promise.all(batch.map(async route=>{
     // Forms and search are always rendered live; no cached nonces are published.
     if(route==='/submit-listing/') return;
-    const r=await get(route);
-    if(r.status===404) return;
-    if(!r.ok) throw Error(route+': HTTP '+r.status);
-    const doc=parse(await r.text()), head=querySelector(doc,'head'),body=querySelector(doc,'body');
+    let input=nativePages.get(route);
+    if(!input) {
+      const r=await get(route);
+      if(r.status===404 && nativeArchives.has(route)) input=renderArchive(nativeArchives.get(route),editorial.shell);
+      else if(r.status===404) return;
+      else if(!r.ok) throw Error(route+': HTTP '+r.status);
+      else input=await r.text();
+    }
+    const doc=parse(input), head=querySelector(doc,'head'),body=querySelector(doc,'body');
+    updateEditorialCards(doc,route,editorial.entries);
     if(!head||!body) throw Error('Invalid HTML: '+route);
     if((body.attributes.class||'').includes('logged-in') || querySelector(doc,'#wpadminbar')) throw Error('Authenticated HTML refused');
     for(const a of querySelectorAll(doc,'a')) { const p=pagePath(a.attributes.href||''); if(p&&!done.has(p)) pending.add(p); }
@@ -96,6 +107,9 @@ while(pending.size) {
   }));
   console.log('Public pages refreshed:',pages.size);
 }
+const searchIndex=[...pages].filter(([p])=>p!=='/').map(([p,h])=>{const d=parse(h);const title=querySelector(d,'h1');const desc=querySelectorAll(d,'meta').find(n=>n.attributes.name==='description');return {path:p,title:title?renderSync(title).replace(/<[^>]*>/g,''):p,description:desc?.attributes.content||''};});
+const searchHtml=editorial.shell.replace('{{META}}','<title>Search | Dubai Xtra</title><meta name="robots" content="noindex,follow">').replace('{{MAIN}}','<main id="primary" class="dx-archive"><header class="dx-archive-header"><h1>Search Dubai Xtra</h1><form id="editorial-search" action="/search/" method="get"><label for="search-query">Search articles, places and businesses</label><input id="search-query" type="search" name="s"><button type="submit">Search</button></form><p id="search-status" role="status">Loading search…</p></header><section class="dx-archive-grid-wrap"><div id="search-results" class="dx-archive-grid"></div></section></main><script src="/editorial-assets/search.js" defer></script>');
+pages.set('/search/',searchHtml);
 if(pages.size<100) throw Error('Incomplete export: refusing to replace the site');
 const assetDone=new Set();
 const outputRoot=path.resolve('dist');
@@ -115,9 +129,11 @@ while([...assets.keys()].some(k=>!assetDone.has(k))) {
     await fs.mkdir(path.dirname(target),{recursive:true});await fs.writeFile(target,buffer);
   }));
 }
+await fs.cp('content/assets','dist/editorial-assets',{recursive:true});
+await fs.writeFile('dist/search-index.json',JSON.stringify(searchIndex));
 for(const [route,html] of pages) { const file=path.join('dist',route,'index.html');await fs.mkdir(path.dirname(file),{recursive:true});await fs.writeFile(file,html); }
-await fs.writeFile('dist/build-manifest.json',JSON.stringify({builtAt:new Date().toISOString(),routes:[...pages.keys()],assets:[...assetDone]}));
-await fs.writeFile('dist/sitemap.xml','<?xml version="1.0"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+[...pages.keys(),'/submit-listing/'].map(p=>`<url><loc>${publicOrigin}${p}</loc></url>`).join('')+'</urlset>');
+await fs.writeFile('dist/build-manifest.json',JSON.stringify({builtAt:new Date().toISOString(),routes:[...pages.keys()],editorialRoutes:[...nativePages.keys()],assets:[...assetDone]}));
+await fs.writeFile('dist/sitemap.xml','<?xml version="1.0"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+[...pages.keys(),'/submit-listing/'].filter(p=>p!=='/search/').map(p=>`<url><loc>${publicOrigin}${p}</loc></url>`).join('')+'</urlset>');
 await fs.writeFile('dist/robots.txt',process.env.INDEXABLE==='true'?`User-agent: *\nAllow: /\nSitemap: ${publicOrigin}/sitemap.xml\n`:'User-agent: *\nDisallow: /\n');
 await fs.writeFile('dist/404.html','<!doctype html><html lang="en"><title>Page not found | Dubai Xtra</title><h1>Page not found</h1><p><a href="/">Return to Dubai Xtra</a></p></html>');
 await fs.copyFile('worker.mjs','dist/_worker.js');
