@@ -1,0 +1,1 @@
+document.querySelectorAll('form[role="search"],form.dx-search-form').forEach(f=>{f.action='https://dubaixtra.com/';});
