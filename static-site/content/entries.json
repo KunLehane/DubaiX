@@ -42,5 +42,25 @@
       }
     ],
     "content": "pages/best-golf-networking-in-dubai-uae.html"
+  },
+  {
+    "slug": "best-indoor-golf-and-simulators-in-dubai",
+    "path": "/best/best-indoor-golf-and-simulators-in-dubai/",
+    "kind": "best-list",
+    "title": "Best Indoor Golf And Simulators In Dubai",
+    "description": "Explore eight indoor golf options in Dubai, including Five Iron, Aguila, MyGolf, SwingFIT, Golf Kraft and Club Lab. Compare locations, practice and social golf.",
+    "image": "/wp-content/uploads/2025/01/golf-Simulator-Dubai-1200x600.jpg",
+    "published": "2026-09-25",
+    "archives": [
+      {
+        "path": "/best/",
+        "title": "Best Of Dubai"
+      },
+      {
+        "path": "/best-category/golf/",
+        "title": "Golf"
+      }
+    ],
+    "content": "pages/best-indoor-golf-and-simulators-in-dubai.html"
   }
 ]
