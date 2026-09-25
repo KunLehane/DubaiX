@@ -41,11 +41,11 @@ function asset(value, base = source) {
   return u.pathname + u.search + u.hash;
 }
 function css(text, base) { return text.replace(/url\(\s*(['"]?)([^)'"\s]+)\1\s*\)/g, (_,q,u) => `url('${asset(u,base).replaceAll("'", '%27')}')`); }
-async function get(route) {
+async function get(route, attempt=0) {
   let url = new URL(route, source);
   // Cloudways may still cache the previous published HTML after a WP save.
   // Fetch fresh anonymous pages for this build while retaining stable asset URLs.
-  if (!/^\/(?:wp-content|wp-includes)\//.test(url.pathname)) url.searchParams.set('_dx_build', buildRevision);
+  if (!/^\/(?:wp-content|wp-includes)\//.test(url.pathname)) url.searchParams.set('_dx_build', buildRevision+'-'+attempt);
   for(let redirects=0; redirects<5; redirects++) {
     if(url.origin !== source.origin) throw Error('Unexpected origin redirect: '+url.origin);
     const r = await fetch(url, { redirect:'manual', signal:AbortSignal.timeout(45000), headers:{'User-Agent':'DubaiXtra-PublicBuild/1.0'} });
@@ -73,7 +73,17 @@ while(pending.size) {
       else if(!r.ok) throw Error(route+': HTTP '+r.status);
       else input=await r.text();
     }
-    const doc=parse(input), head=querySelector(doc,'head'),body=querySelector(doc,'body');
+    let doc=parse(input);
+    // The origin occasionally returns incomplete archive HTML with HTTP 200.
+    // Retry fresh reads; never publish an empty replacement archive.
+    if(nativeArchives.has(route)&&!nativePages.has(route)) {
+      for(let attempt=1;attempt<=3&&!querySelector(doc,'.dx-archive-grid');attempt++) {
+        await new Promise(resolve=>setTimeout(resolve,1000*attempt));
+        const retry=await get(route,attempt);
+        if(retry.ok)doc=parse(await retry.text());
+      }
+    }
+    const head=querySelector(doc,'head'),body=querySelector(doc,'body');
     updateEditorialCards(doc,route,editorial.entries);
     if(!head||!body) throw Error('Invalid HTML: '+route);
     if((body.attributes.class||'').includes('logged-in') || querySelector(doc,'#wpadminbar')) throw Error('Authenticated HTML refused');
