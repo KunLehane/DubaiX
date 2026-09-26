@@ -46,7 +46,7 @@ function dx_instagram_store_field($value) {
 }
 
 foreach (['field_listing_instagram', 'field_bs_instagram'] as $key) {
-    add_filter('acf/prepare_field/key=' . $key, 'dx_instagram_prepare_field');
+    add_filter('acf/load_field/key=' . $key, 'dx_instagram_prepare_field');
     add_filter('acf/validate_value/key=' . $key, 'dx_instagram_validate_field', 20, 2);
     add_filter('acf/update_value/key=' . $key, 'dx_instagram_store_field');
     add_filter('acf/load_value/key=' . $key, 'dx_instagram_store_field');
