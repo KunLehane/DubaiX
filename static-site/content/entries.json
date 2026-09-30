@@ -62,5 +62,25 @@
       }
     ],
     "content": "pages/best-indoor-golf-and-simulators-in-dubai.html"
+  },
+  {
+    "slug": "best-tailors-in-jvc",
+    "path": "/best/best-tailors-in-jvc/",
+    "kind": "best-list",
+    "title": "Best Tailors in JVC: Alterations & Custom Clothing",
+    "description": "Find tailors in JVC for alterations, custom suits and clothing repairs. Compare four local shops, with images, addresses, phone numbers and directory profiles.",
+    "image": "/editorial-assets/the-custom-shop-circle-mall.jpg",
+    "published": "2026-09-30",
+    "content": "pages/best-tailors-in-jvc.html",
+    "archives": [
+      {
+        "path": "/best/",
+        "title": "Best Of Dubai"
+      },
+      {
+        "path": "/best-category/tailors/",
+        "title": "Tailors"
+      }
+    ]
   }
 ]
