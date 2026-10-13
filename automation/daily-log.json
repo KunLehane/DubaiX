@@ -1,0 +1,29 @@
+[
+  {
+    "date": "2026-10-13",
+    "path": "/best/best-gyms-in-al-barsha/",
+    "result": "published",
+    "source": "search-console",
+    "stats": {
+      "fetcher": "http",
+      "candidates": 8,
+      "sitesLoaded": 7,
+      "photosOffered": 11,
+      "accepted": 6,
+      "photoChosen": 4,
+      "withPhoto": 4
+    },
+    "businesses": [
+      "Nitro Gym Al Barsha",
+      "Fat to Fit Fitness Gym",
+      "Body Master Gym",
+      "Grand Gold Gym",
+      "Warehouse Gym Al Barsha Ladies",
+      "RedFit Gym"
+    ],
+    "skips": [
+      "Hiitzone: site did not load",
+      "PureGym Al Barsha: No phone number is shown anywhere in the fetched website text, which is required. The gym is in Al Barsha (Umm Suqeim St, Al Barsha 2) and the site is live, but the listing cannot be used without a phone number."
+    ]
+  }
+]

@@ -82,5 +82,25 @@
         "title": "Tailors"
       }
     ]
+  },
+  {
+    "slug": "best-gyms-in-al-barsha",
+    "path": "/best/best-gyms-in-al-barsha/",
+    "kind": "best-list",
+    "title": "Best Gyms in Al Barsha, Dubai: 6 Places to Train",
+    "description": "Six gyms in Al Barsha, Dubai, from 24 hour floors to a women-only club, researched from official websites. Compare what each one offers.",
+    "image": "/editorial-assets/gyms-in-al-barsha-nitro-gym-al-barsha.jpg",
+    "published": "2026-10-13",
+    "content": "pages/best-gyms-in-al-barsha.html",
+    "archives": [
+      {
+        "path": "/best/",
+        "title": "Best Of Dubai"
+      },
+      {
+        "path": "/best-category/gyms/",
+        "title": "Gyms"
+      }
+    ]
   }
 ]
