@@ -102,5 +102,25 @@
         "title": "Gyms"
       }
     ]
+  },
+  {
+    "slug": "best-bespoke-suit-tailors-in-dubai",
+    "path": "/best/best-bespoke-suit-tailors-in-dubai/",
+    "kind": "best-list",
+    "title": "Best Bespoke Suit Tailors in Dubai: 5 to Know",
+    "description": "Five bespoke suit tailors in Dubai, from DIFC boutiques to home fittings in Souk Al Kabeer, researched from their official websites.",
+    "image": "/editorial-assets/bespoke-suit-tailors-in-dubai-bespoke.jpg",
+    "published": "2026-10-14",
+    "content": "pages/best-bespoke-suit-tailors-in-dubai.html",
+    "archives": [
+      {
+        "path": "/best/",
+        "title": "Best Of Dubai"
+      },
+      {
+        "path": "/best-category/bespoke-suit-tailors/",
+        "title": "Bespoke Suit Tailors"
+      }
+    ]
   }
 ]

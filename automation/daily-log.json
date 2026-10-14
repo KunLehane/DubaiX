@@ -25,5 +25,32 @@
       "Hiitzone: site did not load",
       "PureGym Al Barsha: No phone number is shown anywhere in the fetched website text, which is required. The gym is in Al Barsha (Umm Suqeim St, Al Barsha 2) and the site is live, but the listing cannot be used without a phone number."
     ]
+  },
+  {
+    "date": "2026-10-14",
+    "path": "/best/best-bespoke-suit-tailors-in-dubai/",
+    "result": "published",
+    "source": "search-console",
+    "stats": {
+      "fetcher": "http",
+      "candidates": 8,
+      "sitesLoaded": 5,
+      "photosOffered": 7,
+      "accepted": 5,
+      "photoChosen": 3,
+      "withPhoto": 3
+    },
+    "businesses": [
+      "Bespoke",
+      "Collars & Cuffs",
+      "Stallion Bespoke",
+      "Lapels Bespoke",
+      "Suits and Shirts"
+    ],
+    "skips": [
+      "Knights & Lords: site did not load",
+      "Suited & Booted: site did not load",
+      "Savile Row Dubai: site did not load"
+    ]
   }
 ]
