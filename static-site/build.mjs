@@ -19,5 +19,3 @@ for(const p of pages){
 }
 await fs.writeFile('dist/sitemap.xml','<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+pages.map(p=>`<url><loc>https://dubaixtra.com${p.path}</loc></url>`).join('')+'</urlset>');
 console.log(`Built ${pages.length} static pages.`);
-
-await import('./consent-rollout.mjs');
