@@ -148,3 +148,7 @@ await fs.writeFile('dist/robots.txt',process.env.INDEXABLE==='true'?`User-agent:
 await fs.writeFile('dist/404.html','<!doctype html><html lang="en"><title>Page not found | Dubai Xtra</title><h1>Page not found</h1><p><a href="/">Return to Dubai Xtra</a></p></html>');
 await fs.copyFile('worker.mjs','dist/_worker.js');
 console.log(JSON.stringify({pages:pages.size,assets:assetDone.size}));
+
+await fs.copyFile('public/consent.js','dist/consent.js');
+await fs.copyFile('public/consent.css','dist/consent.css');
+await import('./consent-rollout.mjs');
