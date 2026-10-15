@@ -11,3 +11,7 @@ Listing submissions link to the existing live WordPress form. Search and comment
 Keep WordPress on Cloudways for submissions, draft review, logo uploads and notification email. Before production cutover, configure and test a separate backend origin, fresh published-content synchronisation and frontend rebuild on publishing. Do not point dubaixtra.com at this snapshot before that work is complete.
 
 The migration preserves existing page content and public routes including 13 pagination pages. Broken legacy internal destinations were corrected where a matching page existed; other broken links were unlinked. Existing public review claims were preserved.
+
+## Consent controls
+
+The build runs `consent-rollout.mjs` on the generated HTML before deployment. It gates existing GA scripts and external iframe URLs before browser parsing and injects the approved Accept / Manage preferences dialog. Site identity and any existing GA measurement ID are in `consent.config.json`. Categories are shown only when detected. Settings expire after 180 days; rejection, corrupt storage and unavailable storage default to optional services off. Withdrawal reloads the page and clears accessible GA cookies. Cookie details and the settings link are available at `/cookie-policy/`. New tracking integrations must be explicitly reviewed; this is not a universal tracker scanner.
