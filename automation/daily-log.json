@@ -52,5 +52,31 @@
       "Suited & Booted: site did not load",
       "Savile Row Dubai: site did not load"
     ]
+  },
+  {
+    "date": "2026-10-15",
+    "path": "/best/best-clothing-alteration-services-in-dubai/",
+    "result": "published",
+    "source": "search-console",
+    "stats": {
+      "fetcher": "http",
+      "candidates": 8,
+      "sitesLoaded": 8,
+      "photosOffered": 12,
+      "accepted": 6,
+      "photoChosen": 1,
+      "withPhoto": 1
+    },
+    "businesses": [
+      "Tailor & Tweak",
+      "Prive Atelier",
+      "Stitch In Time Tailoring",
+      "The Sewing Corner",
+      "Dr. Alter",
+      "Near Tailors"
+    ],
+    "skips": [
+      "Dream Girl Tailors: Claude request failed"
+    ]
   }
 ]

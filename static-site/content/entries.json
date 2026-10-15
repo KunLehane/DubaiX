@@ -122,5 +122,25 @@
         "title": "Bespoke Suit Tailors"
       }
     ]
+  },
+  {
+    "slug": "best-clothing-alteration-services-in-dubai",
+    "path": "/best/best-clothing-alteration-services-in-dubai/",
+    "kind": "best-list",
+    "title": "Best Clothing Alteration Services in Dubai | Dubai Xtra",
+    "description": "Six clothing alteration services in Dubai, from same day hems to home tailoring and bridal work, researched from their official websites.",
+    "image": "/editorial-assets/clothing-alteration-services-in-dubai-prive-atelier.png",
+    "published": "2026-10-15",
+    "content": "pages/best-clothing-alteration-services-in-dubai.html",
+    "archives": [
+      {
+        "path": "/best/",
+        "title": "Best Of Dubai"
+      },
+      {
+        "path": "/best-category/clothing-alteration-services/",
+        "title": "Clothing Alteration Services"
+      }
+    ]
   }
 ]
