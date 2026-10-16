@@ -142,5 +142,25 @@
         "title": "Clothing Alteration Services"
       }
     ]
+  },
+  {
+    "slug": "best-gyms-in-jvc",
+    "path": "/best/best-gyms-in-jvc/",
+    "kind": "best-list",
+    "title": "Best Gyms in JVC, Dubai: Our Top 4 Picks",
+    "description": "Looking for the best gyms in JVC? We compare four options, from EMS studios to Hyrox training clubs and hotel gyms, to help you choose.",
+    "image": "/editorial-assets/gyms-in-jvc-my30minutes-ems-gym-jvc.jpg",
+    "published": "2026-10-16",
+    "content": "pages/best-gyms-in-jvc.html",
+    "archives": [
+      {
+        "path": "/best/",
+        "title": "Best Of Dubai"
+      },
+      {
+        "path": "/best-category/gyms/",
+        "title": "Gyms"
+      }
+    ]
   }
 ]

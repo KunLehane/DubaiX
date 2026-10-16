@@ -78,5 +78,32 @@
     "skips": [
       "Dream Girl Tailors: Claude request failed"
     ]
+  },
+  {
+    "date": "2026-10-16",
+    "path": "/best/best-gyms-in-jvc/",
+    "result": "published",
+    "source": "search-console",
+    "stats": {
+      "fetcher": "http",
+      "candidates": 8,
+      "sitesLoaded": 7,
+      "photosOffered": 8,
+      "accepted": 4,
+      "photoChosen": 2,
+      "withPhoto": 2
+    },
+    "businesses": [
+      "Prime Fitness JVC",
+      "My30Minutes EMS Gym JVC",
+      "Circuit Fit",
+      "Move at FIVE"
+    ],
+    "skips": [
+      "Vortex Fitness JVC | Best Premium Gym in JVC: site did not load",
+      "Wellfit JVC: phone not on site",
+      "OneFit Gym: No phone number is shown on the website. The site offers only a WhatsApp button and a contact form, so the required phone field cannot be filled from the site text. The business is a gym in Jumeirah Village Triangle, which is adjacent to JVC, so location is not the issue.",
+      "Anytime Fitness JVC Phantom: The fetched website is the generic Anytime Fitness global page. It shows no phone number, no JVC address or location, and only a 'Dubai ... coming soon' notice, so the site does not confirm a usable JVC premises."
+    ]
   }
 ]
