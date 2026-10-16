@@ -105,5 +105,32 @@
       "OneFit Gym: No phone number is shown on the website. The site offers only a WhatsApp button and a contact form, so the required phone field cannot be filled from the site text. The business is a gym in Jumeirah Village Triangle, which is adjacent to JVC, so location is not the issue.",
       "Anytime Fitness JVC Phantom: The fetched website is the generic Anytime Fitness global page. It shows no phone number, no JVC address or location, and only a 'Dubai ... coming soon' notice, so the site does not confirm a usable JVC premises."
     ]
+  },
+  {
+    "date": "2026-10-16",
+    "path": "/best/best-gyms-in-tecom/",
+    "result": "published",
+    "source": "search-console",
+    "stats": {
+      "fetcher": "http",
+      "candidates": 8,
+      "sitesLoaded": 6,
+      "photosOffered": 8,
+      "accepted": 4,
+      "photoChosen": 2,
+      "withPhoto": 2
+    },
+    "businesses": [
+      "Face Off Fitness - Barsha Heights",
+      "Red Gym",
+      "Snap Fitness Media City",
+      "Fitness Avenue"
+    ],
+    "skips": [
+      "Hiitzone Gym in Barsha Heights: site did not load",
+      "Justfit EMS Dubai: site did not load",
+      "Fat To Fit Fitness Gym (Biggest Gym in Al Barsha): The business is located at Sama Building, Al Barsha 1, Dubai, which is not in or right beside TECOM. It is a gym, and it has a phone number, but the location rule is not met.",
+      "Kick It Body Fitness EMS: The website does not state a street address or Dubai district, and nothing in the text places the business in or beside TECOM. The only location clue is a reviewer's mention of 'easy access near the metro station', which does not confirm TECOM."
+    ]
   }
 ]

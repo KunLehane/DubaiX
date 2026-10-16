@@ -162,5 +162,25 @@
         "title": "Gyms"
       }
     ]
+  },
+  {
+    "slug": "best-gyms-in-tecom",
+    "path": "/best/best-gyms-in-tecom/",
+    "kind": "best-list",
+    "title": "Best Gyms in TECOM, Dubai: Four Places to Train",
+    "description": "Looking for a gym in TECOM, Dubai? We compare four options with personal training, group classes, 24-hour access and free parking. Find your fit.",
+    "image": "/editorial-assets/gyms-in-tecom-face-off-fitness-barsha-heights.jpg",
+    "published": "2026-10-16",
+    "content": "pages/best-gyms-in-tecom.html",
+    "archives": [
+      {
+        "path": "/best/",
+        "title": "Best Of Dubai"
+      },
+      {
+        "path": "/best-category/gyms/",
+        "title": "Gyms"
+      }
+    ]
   }
 ]
