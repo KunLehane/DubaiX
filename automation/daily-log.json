@@ -132,5 +132,28 @@
       "Fat To Fit Fitness Gym (Biggest Gym in Al Barsha): The business is located at Sama Building, Al Barsha 1, Dubai, which is not in or right beside TECOM. It is a gym, and it has a phone number, but the location rule is not met.",
       "Kick It Body Fitness EMS: The website does not state a street address or Dubai district, and nothing in the text places the business in or beside TECOM. The only location clue is a reviewer's mention of 'easy access near the metro station', which does not confirm TECOM."
     ]
+  },
+  {
+    "date": "2026-10-17",
+    "path": "/best/best-boxing-gyms-in-jlt/",
+    "result": "too-few",
+    "source": "search-console",
+    "stats": {
+      "fetcher": "http",
+      "candidates": 8,
+      "sitesLoaded": 6,
+      "photosOffered": 7,
+      "accepted": 0,
+      "photoChosen": 0,
+      "withPhoto": 0
+    },
+    "skips": [
+      "Volcano PT Club JLT: site did not load",
+      "Royal Boxing & Fitness, The Palm: site did not load",
+      "Round 10 Boxing Club - Boxing Gym Dubai: The business is located at Warehouse #42, 8th St, Al Quoz 1, Dubai, which is not in or right beside JLT.",
+      "Boxica Palm: Not located in or beside JLT. The site lists two studios, in Studio City (The Hive Building) and Palm Jumeirah (Golden Mile Galleria). No phone number is shown on the site; the contact page has only a country-code list and a message form.",
+      "BoxLab: The website text only shows a title placing BoxLab at Fairmont The Palm, which is on Palm Jumeirah rather than in or beside JLT. No phone number is shown in the text provided.",
+      "Urban Boxer DXB: Urban Boxer DXB is located at The Grandstand, Dubai Autodrome, Motor City, which is a different district from JLT (Jumeirah Lake Towers), so it is not in or right beside the area this guide covers."
+    ]
   }
 ]
