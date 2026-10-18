@@ -182,5 +182,25 @@
         "title": "Gyms"
       }
     ]
+  },
+  {
+    "slug": "best-tailors-in-difc",
+    "path": "/best/best-tailors-in-difc/",
+    "kind": "best-list",
+    "title": "Best Tailors in DIFC: 6 Suit and Alteration Specialists",
+    "description": "Compare six tailors in DIFC, Dubai, for bespoke suits, shirts, wedding wear and alterations. Find the right studio for your fit, fabric and timing.",
+    "image": "/editorial-assets/tailors-in-difc-collars-and-cuffs.jpg",
+    "published": "2026-10-18",
+    "content": "pages/best-tailors-in-difc.html",
+    "archives": [
+      {
+        "path": "/best/",
+        "title": "Best Of Dubai"
+      },
+      {
+        "path": "/best-category/tailors/",
+        "title": "Tailors"
+      }
+    ]
   }
 ]

@@ -155,5 +155,29 @@
       "BoxLab: The website text only shows a title placing BoxLab at Fairmont The Palm, which is on Palm Jumeirah rather than in or beside JLT. No phone number is shown in the text provided.",
       "Urban Boxer DXB: Urban Boxer DXB is located at The Grandstand, Dubai Autodrome, Motor City, which is a different district from JLT (Jumeirah Lake Towers), so it is not in or right beside the area this guide covers."
     ]
+  },
+  {
+    "date": "2026-10-18",
+    "path": "/best/best-tailors-in-difc/",
+    "result": "published",
+    "source": "search-console",
+    "stats": {
+      "fetcher": "http",
+      "candidates": 8,
+      "sitesLoaded": 8,
+      "photosOffered": 14,
+      "accepted": 6,
+      "photoChosen": 4,
+      "withPhoto": 4
+    },
+    "businesses": [
+      "Stallion Bespoke",
+      "Collars & Cuffs",
+      "House of Tailors",
+      "My Tailor & Little Things",
+      "Bespoke Men's Tailor",
+      "The Sewing Corner"
+    ],
+    "skips": []
   }
 ]

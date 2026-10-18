@@ -1,0 +1,391 @@
+<main id="primary" class="dx-single-best-list">
+<style>
+/* ═══ BREADCRUMBS ═══ */
+.dx-breadcrumbs {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 0;
+  font-size: 0.75rem;
+  color: var(--dx-mid-grey);
+  letter-spacing: 0.05em;
+}
+
+/* ═══ HERO ═══ */
+.dx-bl-hero {
+  position: relative;
+  min-height: 480px;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--dx-navy);
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+}
+.dx-bl-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(26,26,46,0.3), rgba(26,26,46,0.55) 50%, rgba(26,26,46,0.92));
+  pointer-events: none;
+}
+.dx-bl-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  width: 100%;
+}
+.dx-bl-hero h1 {
+  color: var(--dx-warm-white);
+  font-size: 4.5rem;
+  margin: 1rem 0 0.75rem;
+  line-height: 1.05;
+}
+.dx-bl-hero .section-label { color: var(--dx-gold); }
+.dx-bl-hero-meta {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.75);
+  letter-spacing: 0.06em;
+}
+.dx-bl-count-tag {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--dx-gold);
+  color: var(--dx-navy);
+  padding: 0.5rem 1rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 2px;
+}
+
+/* ═══ INTRO ═══ */
+.dx-bl-intro {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 1rem;
+}
+.dx-bl-intro p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+.dx-bl-intro p:first-of-type::first-letter {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4.5rem;
+  float: left;
+  line-height: 0.9;
+  margin: 0.4rem 0.6rem 0 0;
+  color: var(--dx-gold);
+  font-weight: 600;
+}
+
+/* ═══ METHODOLOGY ═══ */
+.dx-bl-methodology {
+  max-width: 760px;
+  margin: 0 auto 3rem;
+  padding: 0 1.5rem;
+}
+.dx-bl-methodology-box {
+  background: var(--dx-warm-white);
+  border-left: 3px solid var(--dx-gold);
+  padding: 1.5rem 1.75rem;
+}
+.dx-bl-methodology-box h2 {
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--dx-gold);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+.dx-bl-methodology-box p { margin: 0; font-size: 0.95rem; line-height: 1.7; color: var(--dx-text); }
+
+/* ═══ TABLE OF CONTENTS ═══ */
+.dx-bl-toc {
+  max-width: 760px;
+  margin: 0 auto 4rem;
+  padding: 0 1.5rem;
+}
+.dx-bl-toc-inner {
+  background: var(--dx-white);
+  border: 1px solid var(--dx-light-grey);
+  padding: 1.75rem 2rem;
+  border-radius: 2px;
+}
+.dx-bl-toc-inner h2 {
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--dx-mid-grey);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  margin: 0 0 1rem;
+}
+.dx-bl-toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  columns: 2;
+  column-gap: 2rem;
+}
+.dx-bl-toc-list li {
+  break-inside: avoid;
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
+}
+.dx-bl-toc-list a { color: var(--dx-navy); }
+.dx-bl-toc-list a:hover { color: var(--dx-gold); }
+.dx-bl-toc-num {
+  display: inline-block;
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--dx-gold);
+  font-weight: 700;
+  margin-right: 0.5rem;
+  min-width: 1.5rem;
+}
+
+/* ═══ ITEMS ═══ */
+.dx-bl-items { background: var(--dx-warm-white); padding: 2rem 0 4rem; }
+.dx-bl-item {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  display: grid;
+  grid-template-columns: 4fr 5fr 3fr;
+  gap: 2.5rem;
+  align-items: start;
+  border-bottom: 1px solid var(--dx-light-grey);
+}
+.dx-bl-item:last-child { border-bottom: none; }
+/* Grid items default to min-width: auto, which lets a large source photo's
+   natural size force its track (and the whole grid) wider than the
+   viewport. min-width: 0 lets every track shrink to the layout's actual
+   available space instead. */
+.dx-bl-item-img,
+.dx-bl-item-img-fallback,
+.dx-bl-item-content,
+.dx-bl-item-aside {
+  min-width: 0;
+}
+.dx-bl-item-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+.dx-bl-item-img-fallback {
+  width: 100%;
+  height: 420px;
+  background: var(--dx-light-grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 7rem;
+  color: var(--dx-gold);
+  font-weight: 600;
+}
+.dx-bl-item-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5rem;
+  color: var(--dx-gold);
+  font-weight: 700;
+  line-height: 0.9;
+  margin: 0 0 0.5rem;
+}
+.dx-bl-item-title {
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem;
+  line-height: 1.15;
+}
+.dx-bl-item-title a { color: var(--dx-navy); }
+.dx-bl-item-title a:hover { color: var(--dx-gold); }
+.dx-bl-item-meta {
+  font-size: 0.85rem;
+  color: var(--dx-mid-grey);
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+.dx-bl-item-desc {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--dx-text);
+  margin: 1rem 0;
+}
+.dx-bl-item-highlight {
+  background: var(--dx-white);
+  border: 1px solid var(--dx-light-grey);
+  padding: 0.85rem 1.25rem;
+  margin: 1.25rem 0;
+  font-size: 0.95rem;
+  border-left: 3px solid var(--dx-gold);
+}
+.dx-bl-item-highlight-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--dx-gold);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+.dx-bl-item-cta {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--dx-navy);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--dx-gold);
+  text-underline-offset: 4px;
+  margin-top: 1rem;
+  display: inline-block;
+}
+.dx-bl-item-cta:hover { color: var(--dx-gold); }
+
+/* Booking sidebar card per coach */
+.dx-bl-item-aside {
+  background: var(--dx-warm-white);
+  border: 1px solid var(--dx-light-grey);
+  padding: 1.75rem 1.5rem;
+  border-radius: 2px;
+  position: sticky;
+  top: 100px;
+}
+.dx-bl-aside-label {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--dx-gold);
+  margin-bottom: 0.5rem;
+}
+.dx-bl-aside-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  color: var(--dx-navy);
+  line-height: 1.2;
+}
+.dx-bl-aside-detail {
+  margin-bottom: 1rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--dx-light-grey);
+}
+.dx-bl-aside-detail-label {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dx-mid-grey);
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+.dx-bl-aside-detail-value {
+  font-size: 0.875rem;
+  color: var(--dx-text);
+  line-height: 1.4;
+}
+.dx-bl-aside-best-for {
+  background: var(--dx-white);
+  border-left: 3px solid var(--dx-gold);
+  padding: 0.6rem 0.85rem;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+.dx-bl-aside-best-for-label {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--dx-gold);
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+}
+.dx-bl-aside-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0.5rem 0 1rem;
+  padding: 0.85rem 1rem;
+}
+.dx-bl-aside-trust {
+  font-size: 0.7rem;
+  color: var(--dx-mid-grey);
+  margin: 0;
+  text-align: center;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+}
+.dx-bl-aside-no-link {
+  display: block;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--dx-mid-grey);
+  font-style: italic;
+  padding: 0.85rem 0;
+  margin-bottom: 1rem;
+  border-top: 1px solid var(--dx-light-grey);
+  border-bottom: 1px solid var(--dx-light-grey);
+}
+
+/* ═══ RELATED ═══ */
+.dx-related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Tablet - drop the booking aside below content (image left, content right, aside spans full width below) */
+@media (max-width: 1024px) {
+  .dx-bl-item {
+    grid-template-columns: 5fr 7fr;
+  }
+  .dx-bl-item-aside {
+    grid-column: 1 / -1;
+    position: static;
+    max-width: 480px;
+    margin: 0.5rem auto 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .dx-bl-hero { min-height: 380px; }
+  .dx-bl-hero h1 { font-size: 2.75rem; }
+  .dx-bl-toc-list { columns: 1; }
+  .dx-bl-item {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 3rem 1.5rem;
+  }
+  .dx-bl-item-img,
+  .dx-bl-item-img-fallback { height: 240px; }
+  .dx-bl-item-img-fallback { font-size: 4.5rem; }
+  .dx-bl-item-number { font-size: 3.5rem; }
+  .dx-bl-item-title { font-size: 1.75rem; }
+  .dx-related-grid { grid-template-columns: 1fr; }
+}
+
+.dx-jvc-guide figure{margin:0;min-width:0}.dx-jvc-guide figcaption{font-size:.75rem;margin-top:.6rem;color:var(--dx-mid-grey)}.dx-jvc-guide .dx-logo{object-fit:contain;padding:2rem;background:var(--dx-navy)}.dx-jvc-guide .dx-bl-item-aside{position:static}.dx-jvc-guide .dx-bl-item-img{height:300px}.dx-jvc-guide .dx-bl-intro p:first-of-type::first-letter{font:inherit;float:none;margin:0;color:inherit}.dx-jvc-guide .dx-bl-item-aside a{overflow-wrap:anywhere}.dx-jvc-guide .dx-bl-methodology-box h2{line-height:1.5}
+</style>
+<nav class="dx-breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/best/">Best Of Dubai</a> / Tailors in DIFC</nav>
+<header class="dx-bl-hero" style="background-image:url('/editorial-assets/tailors-in-difc-collars-and-cuffs.jpg')"><div class="dx-bl-hero-overlay" aria-hidden="true"></div><div class="dx-bl-hero-inner"><span class="section-label">Tailoring in DIFC</span><h1>Best Tailors in DIFC</h1><p class="dx-bl-hero-meta">Six tailors for suits, shirts, wedding wear and alterations, compared by what they do best.</p><span class="dx-bl-count-tag">6 local options · Updated October 2026</span></div></header>
+<section class="dx-bl-intro"><p>DIFC has a good mix of tailors, from bespoke houses that build a suit from scratch to alterations studios that can handle a hem or a bridal fitting. This guide covers six of them, with notes on what each is known for.</p><p>The list is in no particular order. We researched each tailor from their official website and have not visited in person, so confirm opening hours, services and locations before you go. Use the 'good for' lines to find a match for your need, then contact the studio directly to book.</p></section>
+<section class="dx-bl-methodology"><div class="dx-bl-methodology-box"><h2>How we chose these</h2><p>This is a researched editorial shortlist, not a ranked test, and the businesses are listed in no particular order. We checked locations, services and contact details against each business's official website in October 2026. We have not visited them in person. Confirm current opening hours, prices and availability directly with the business.</p><p>Images come from each business's own website, credited below.</p></div></section>
+<div class="dx-bl-items">
+<article class="dx-bl-item" id="pick-1"><div class="dx-bl-item-img-fallback" aria-hidden="true">S</div><div class="dx-bl-item-content"><div class="dx-bl-item-number" aria-hidden="true">01</div><h2 class="dx-bl-item-title">Stallion Bespoke</h2><p class="dx-bl-item-meta">A good fit for: Made-to-measure suits and wedding tailoring</p><p class="dx-bl-item-desc">Stallion Bespoke is a bespoke tailor with four boutiques across Dubai, founded in 2014 and backed by the Shree Group, whose textile business began in 1971. The studio makes suits, shirts, jackets and trousers, along with wedding tailoring, corporate wardrobe solutions, VIP tailoring delivered to a home, office or hotel, and alterations. Measurements cover more than thirty points, and the cloth comes from mills in England and Italy.</p><p class="dx-bl-item-desc">The service suits business leaders, entrepreneurs, executives, diplomats, lawyers, bankers and creative professionals. A visit starts with a consultation about profession, lifestyle and the purpose of the garment, followed by fabric and design choices, measurements, a basted draft fitting and final refinements. Appointments can be requested through the website or by WhatsApp, with confirmation promised within a few hours, and consultations are not charged. The Downtown Dubai boutique is at Tower 3, South Ridge Park, in the Burj Khalifa area.</p><h3 class="dx-bl-item-subhead">What they offer</h3><ul class="dx-bl-item-list"><li><strong>Bespoke Suits</strong>: Fully personalised suits tailored exclusively to your measurements, lifestyle and personal style.</li><li><strong>Bespoke Shirts</strong>: Custom shirts crafted from premium cottons and linens with refined detailing throughout.</li><li><strong>Bespoke Jackets</strong>: Versatile jackets designed for business, travel and leisure, balancing precision and elegance.</li><li><strong>Wedding Tailoring</strong>: Custom garments for grooms, groomsmen, wedding parties and formal occasions with distinction.</li><li><strong>Refinement Services</strong>: Expert alterations and garment refinements executed with exceptional precision and care throughout.</li></ul><h3 class="dx-bl-item-subhead">Good to know</h3><ul class="dx-bl-item-list"><li>Four boutiques across Dubai</li><li>Master tailors on site at every location</li><li>Consultations are free</li><li>Lifetime alteration support</li></ul><p class="dx-bl-item-meta">Google rating: 4.9 out of 5 from 730 reviews (checked October 2026).</p><p class="dx-bl-item-highlight">Consultations are free, so it is a sensible first step if you are unsure about fabric or cut.</p><a class="dx-bl-item-cta" href="http://www.stallionbespoke.com/" rel="nofollow noopener" target="_blank">Visit website →</a></div><aside class="dx-bl-item-aside" aria-label="Contact Stallion Bespoke"><span class="dx-bl-aside-label">Plan your visit</span><h3 class="dx-bl-aside-name">Stallion Bespoke</h3><p>Tower 3, South Ridge Park, Shop 6, Burj Khalifa, Downtown Dubai, Dubai</p><p><a href="tel:+971557451697">+971 55 745 1697</a></p><a href="http://www.stallionbespoke.com/" class="dx-bl-item-cta" rel="nofollow noopener" target="_blank">Official website</a></aside></article>
+<article class="dx-bl-item" id="pick-2"><figure><img class="dx-bl-item-img" src="/editorial-assets/tailors-in-difc-collars-and-cuffs.jpg" alt="Showroom at Collars &amp; Cuffs, Gate Avenue Mall, DIFC" loading="lazy"><figcaption>Image: <a href="https://www.collarsandcuffs.ae/?utm_source=google&amp;utm_medium=organic&amp;utm_campaign=gmb-listing" rel="nofollow noopener" target="_blank">Collars &amp; Cuffs</a>.</figcaption></figure><div class="dx-bl-item-content"><div class="dx-bl-item-number" aria-hidden="true">02</div><h2 class="dx-bl-item-title">Collars &amp; Cuffs</h2><p class="dx-bl-item-meta">A good fit for: Home and office suit appointments</p><p class="dx-bl-item-desc">Collars &amp; Cuffs offers bespoke tailoring for men who want clothing cut for them alone. The process starts with measurements, posture and style, after which each piece is crafted from premium fabrics by mills such as Ermenegildo Zegna and Scabal, with the fit refined across personal fittings. The range covers business suits, wedding tuxedos, everyday shirts and trousers, and the site lists a collection of over 5,000 fabrics.</p><p class="dx-bl-item-desc">The business suits clients who value a personal approach and busy schedules, as the concierge provides home and office appointments in Dubai for connoisseur members. A visit begins with a consultation, which can be booked through the website form or by phone, with a preferred date and time selected. The showroom is in Unit 014, Gate Avenue Mall, Dubai International Financial Centre (DIFC), Dubai.</p><h3 class="dx-bl-item-subhead">What they offer</h3><ul class="dx-bl-item-list"><li><strong>Made-to-measure suits and shirts</strong>: Bespoke suits, shirts, trousers and tuxedos are made from your measurements, posture and style. The fit is refined across personal fittings until it is right.</li><li><strong>Home and office appointments</strong>: A personal concierge provides appointments at home or in the office for connoisseur members. This is offered to suit busy schedules.</li><li><strong>Express service</strong>: The business offers urgent bespoke suits for unforeseen events, according to the website.</li><li><strong>Wedding suits</strong>: Wedding suits and wedding tuxedos are offered as part of the bespoke range.</li><li><strong>Accessories and leather goods</strong>: The range includes pocket squares, cufflinks, ties and leather goods.</li></ul><h3 class="dx-bl-item-subhead">Good to know</h3><ul class="dx-bl-item-list"><li>Complimentary home and office appointments for loyalty programme members</li><li>Collection of over 5,000 fabrics</li><li>Express service for urgent bespoke suits</li><li>Four generations of bespoke tailoring</li></ul><p class="dx-bl-item-meta">Google rating: 4.9 out of 5 from 494 reviews (checked October 2026).</p><p class="dx-bl-item-highlight">Ask about a home or office appointment if you would rather not travel to the showroom at Gate Avenue Mall.</p><a class="dx-bl-item-cta" href="https://www.collarsandcuffs.ae/?utm_source=google&amp;utm_medium=organic&amp;utm_campaign=gmb-listing" rel="nofollow noopener" target="_blank">Visit website →</a></div><aside class="dx-bl-item-aside" aria-label="Contact Collars &amp; Cuffs"><span class="dx-bl-aside-label">Plan your visit</span><h3 class="dx-bl-aside-name">Collars &amp; Cuffs</h3><p>Unit 014, Gate Avenue Mall, Dubai International Financial Centre (DIFC) Dubai, U.A.E.</p><p><a href="tel:+97143337848">+971 4 333 7848</a></p><a href="https://www.collarsandcuffs.ae/?utm_source=google&amp;utm_medium=organic&amp;utm_campaign=gmb-listing" class="dx-bl-item-cta" rel="nofollow noopener" target="_blank">Official website</a></aside></article>
+<article class="dx-bl-item" id="pick-3"><figure><img class="dx-bl-item-img" src="/editorial-assets/tailors-in-difc-house-of-tailors.jpg" alt="Woman wearing a blue tailored suit by House of Tailors" loading="lazy"><figcaption>Image: <a href="https://houseoftailors.co/" rel="nofollow noopener" target="_blank">House of Tailors</a>.</figcaption></figure><div class="dx-bl-item-content"><div class="dx-bl-item-number" aria-hidden="true">03</div><h2 class="dx-bl-item-title">House of Tailors</h2><p class="dx-bl-item-meta">A good fit for: Women's bespoke suits and linen</p><p class="dx-bl-item-desc">House of Tailors makes custom clothing for men and women, including bespoke and made-to-measure suits, linen suits, wedding suits and winter suits. The site describes a library of over 5,000 fabrics held in store, sourced from mills in Switzerland, the UK and Italy. It suits clients who want a garment shaped to their own build, style and purpose.</p><p class="dx-bl-item-desc">A visit starts with a consultation at the Business Bay studio in Fifty One Tower, Marasi Drive, or remotely for clients elsewhere. The process includes precision measurements, a personal pattern and typically two to three fittings. Made-to-measure delivery typically takes 10 to 14 days, and bespoke suits three to four weeks. Home visits, virtual appointments and WhatsApp contact are also offered.</p><h3 class="dx-bl-item-subhead">What they offer</h3><ul class="dx-bl-item-list"><li><strong>Men's bespoke and made-to-measure suits</strong>: Custom suits for men, including bespoke suits, double-breasted suits and tuxedos. Measurements go beyond standard sizing and are used to draft a personal pattern.</li><li><strong>Women's bespoke suits</strong>: Bespoke suits for women, including women's business suits and occasion suits. Clients can choose the fabric, lapels, pockets, lining and buttons.</li><li><strong>Linen suits</strong>: Custom-tailored linen suits, along with linen shirts, trousers and jackets for warm weather.</li><li><strong>Wedding suits</strong>: Bespoke wedding suits for men and women, designed for the wedding and other special events.</li></ul><h3 class="dx-bl-item-subhead">Good to know</h3><ul class="dx-bl-item-list"><li>Over 5,000 fabrics in store</li><li>Two to three fittings in the bespoke process</li><li>Made-to-measure delivery typically 10 to 14 days</li><li>Home visits and virtual appointments available</li></ul><p class="dx-bl-item-meta">Google rating: 4.8 out of 5 from 428 reviews (checked October 2026).</p><p class="dx-bl-item-highlight">Book an in-store consultation at Fifty One Tower in Business Bay, or ask about virtual appointments if you are based elsewhere.</p><a class="dx-bl-item-cta" href="https://houseoftailors.co/" rel="nofollow noopener" target="_blank">Visit website →</a></div><aside class="dx-bl-item-aside" aria-label="Contact House of Tailors"><span class="dx-bl-aside-label">Plan your visit</span><h3 class="dx-bl-aside-name">House of Tailors</h3><p>Suite 710, Fifty One Tower, Marasi Dr, Business Bay, Dubai, United Arab Emirates</p><p><a href="tel:+971509372696">+971 50 937 2696</a></p><a href="https://houseoftailors.co/" class="dx-bl-item-cta" rel="nofollow noopener" target="_blank">Official website</a></aside></article>
+<article class="dx-bl-item" id="pick-4"><div class="dx-bl-item-img-fallback" aria-hidden="true">M</div><div class="dx-bl-item-content"><div class="dx-bl-item-number" aria-hidden="true">04</div><h2 class="dx-bl-item-title">My Tailor &amp; Little Things</h2><p class="dx-bl-item-meta">A good fit for: Alterations, dresses and ethnic wear</p><p class="dx-bl-item-desc">The business describes itself as a one-stop shop for custom sartorial needs, crafting each garment from a unique pattern after a tailoring consultation and hand-finishing it. Clients can choose from a range of fabrics and design options, and the team handles everything from simple alterations such as shortening, hemming and tapering to larger modifications. Women's dressmaking, ethnic wear, costumes and embroidery are also listed among its services.</p><p class="dx-bl-item-desc">A typical bespoke order starts with a consultation on fabric, style and fit details such as lapels, collars, cuffs and vents, followed by detailed body measurements from the tailors. Professional female staff are available to take measurements. Clients who prefer not to visit a store can book a home or office visit. The DIFC branch sits alongside the company's other locations in Dubai Marina and Jumeirah Lake Towers.</p><h3 class="dx-bl-item-subhead">What they offer</h3><ul class="dx-bl-item-list"><li><strong>Alterations</strong>: Shortening, hemming, tapering and larger modifications for women and men. Zipper replacements and repairs are also listed.</li><li><strong>Bespoke Suits</strong>: Custom suits built from a fabric and style consultation. Jackets, waistcoats, trousers and shirts are also offered as bespoke pieces.</li><li><strong>Dress Making</strong>: Custom dresses and gowns, including wedding gowns, abayas and evening wear, created from a selection of designs and fabrics.</li><li><strong>Ethnic Wear</strong>: Custom tailoring of sherwanis, anarkalis, kurta pyjamas and sarees, finished with embroidery and ornate needlework.</li><li><strong>Home Visiting Tailor Service</strong>: Tailoring at your home or office, covering bespoke suits, evening dresses and alterations, arranged by appointment.</li></ul><h3 class="dx-bl-item-subhead">Good to know</h3><ul class="dx-bl-item-list"><li>Three locations, including DIFC</li><li>Home visiting tailor service</li><li>Female staff take measurements</li><li>Rated 4.9/5 from 500+ reviews</li></ul><p class="dx-bl-item-meta">Google rating: 4.8 out of 5 from 375 reviews (checked October 2026).</p><p class="dx-bl-item-highlight">Its DIFC boutique is one of three in Dubai, and the home visiting service may suit people with busy schedules.</p><a class="dx-bl-item-cta" href="http://www.mytailor.ae/" rel="nofollow noopener" target="_blank">Visit website →</a></div><aside class="dx-bl-item-aside" aria-label="Contact My Tailor &amp; Little Things"><span class="dx-bl-aside-label">Plan your visit</span><h3 class="dx-bl-aside-name">My Tailor &amp; Little Things</h3><p>DIFC</p><p><a href="tel:+97144216858">+971 4 421 6858</a></p><a href="http://www.mytailor.ae/" class="dx-bl-item-cta" rel="nofollow noopener" target="_blank">Official website</a></aside></article>
+<article class="dx-bl-item" id="pick-5"><figure><img class="dx-bl-item-img" src="/editorial-assets/tailors-in-difc-bespoke-men-s-tailor.jpg" alt="Man wearing a bespoke green double-breasted jacket by Bespoke Men's Tailor, DIFC" loading="lazy"><figcaption>Image: <a href="https://www.bespoke.ae/" rel="nofollow noopener" target="_blank">Bespoke Men's Tailor</a>.</figcaption></figure><div class="dx-bl-item-content"><div class="dx-bl-item-number" aria-hidden="true">05</div><h2 class="dx-bl-item-title">Bespoke Men's Tailor</h2><p class="dx-bl-item-meta">A good fit for: Bespoke suits with personalised details</p><p class="dx-bl-item-desc">Bespoke Men's Tailor creates bespoke suits, shirts and trousers for men, and the website lists wedding, business, power and gala suits among its options. Its fabric selection includes premium cloths, and the team can advise on style, fit and design, from classic to contemporary. Customers can also add personal touches such as monogrammed initials, hand-picked linings and buttons. The brand also offers accessories including ties, bow ties, cufflinks, pocket squares, belts and stud sets.</p><p class="dx-bl-item-desc">A visit begins with a private one-on-one consultation with the master tailor, where preferences are discussed before fabric and design are chosen. The site states that a suit usually takes around four weeks and that a bespoke garment usually needs three fittings. Clients can try on their suit in the boutique before taking it home. The studio is at Level B1, The Gate, in Dubai International Financial Centre, and enquiries can be made by phone, email or WhatsApp, or by booking an appointment online.</p><h3 class="dx-bl-item-subhead">What they offer</h3><ul class="dx-bl-item-list"><li><strong>Private Consultation</strong>: Clients start with a private consultation to choose fabric, style and fit. The site describes it as a one-on-one session with the master tailor.</li><li><strong>Premium Fabrics</strong>: A wide range of high-quality fabrics is offered. The tailor can help find the best option for a chosen style and budget.</li><li><strong>Personalisation</strong>: Monogrammed initials, hand-picked linings and buttons can be added to reflect individual taste.</li><li><strong>Bespoke Suits</strong>: Wedding, business, power and gala suits are offered, each built from a pattern made to the client's measurements.</li><li><strong>Bespoke Shirts and Trousers</strong>: Bespoke shirts and trousers are also listed among the tailoring services.</li></ul><h3 class="dx-bl-item-subhead">Good to know</h3><ul class="dx-bl-item-list"><li>Private consultation with the master tailor</li><li>Try-on in the boutique before taking the suit home</li><li>Usually three fittings for a bespoke garment</li><li>Around four weeks on average for a suit</li></ul><p class="dx-bl-item-meta">Google rating: 4.9 out of 5 from 354 reviews (checked October 2026).</p><p class="dx-bl-item-highlight">Book a private consultation first, then choose your fabric and details such as linings and buttons.</p><a class="dx-bl-item-cta" href="https://www.bespoke.ae/" rel="nofollow noopener" target="_blank">Visit website →</a></div><aside class="dx-bl-item-aside" aria-label="Contact Bespoke Men's Tailor"><span class="dx-bl-aside-label">Plan your visit</span><h3 class="dx-bl-aside-name">Bespoke Men's Tailor</h3><p>Level B1, The Gate, Dubai International Financial Centre, Dubai, United Arab Emirates</p><p><a href="tel:+97143637237">+971 4 363 7237</a></p><a href="https://www.bespoke.ae/" class="dx-bl-item-cta" rel="nofollow noopener" target="_blank">Official website</a></aside></article>
+<article class="dx-bl-item" id="pick-6"><figure><img class="dx-bl-item-img" src="/editorial-assets/tailors-in-difc-the-sewing-corner.webp" alt="Tailor hand-stitching a white garment at The Sewing Corner" loading="lazy"><figcaption>Image: <a href="http://www.thesewingcorner.ae/" rel="nofollow noopener" target="_blank">The Sewing Corner</a>.</figcaption></figure><div class="dx-bl-item-content"><div class="dx-bl-item-number" aria-hidden="true">06</div><h2 class="dx-bl-item-title">The Sewing Corner</h2><p class="dx-bl-item-meta">A good fit for: Bridal and formalwear alterations</p><p class="dx-bl-item-desc">The Sewing Corner offers standard, formalwear and bridal alterations, soft furnishing alterations, and bespoke tailoring for womenswear and menswear. The website describes expert tailoring and says the team aims to make clients look and feel great at all times. Female tailors are available for fittings, alterations and custom tailoring, which suits women who prefer to be fitted by a woman.</p><p class="dx-bl-item-desc">Customers can book an appointment through the website or contact the branch by phone or WhatsApp. Home pickup and drop-off is offered for alterations, and selected alterations can be completed within the same day. The DIFC branch sits on the podium level of Precinct Building 2, next to Bateel Cafe, and is open daily from 10 AM to 10 PM. Prices are listed on the site's pricelist page, which customers can check before visiting.</p><h3 class="dx-bl-item-subhead">What they offer</h3><ul class="dx-bl-item-list"><li><strong>Standard Alterations</strong>: Alterations to everyday garments, listed among the core services on the website.</li><li><strong>Formalwear Alterations</strong>: Alterations to formal clothing, as listed on the website.</li><li><strong>Bridal Alterations</strong>: Alterations to bridal wear, as listed on the website.</li><li><strong>Custom Tailoring for Ladies</strong>: Custom tailoring for women, with female tailors available for fittings.</li><li><strong>Custom Tailoring for Men</strong>: Custom tailoring for men, as listed on the website.</li></ul><h3 class="dx-bl-item-subhead">Good to know</h3><ul class="dx-bl-item-list"><li>Female tailors available at every branch</li><li>Home pickup and drop-off service</li><li>Express 1 day service for selected alterations</li><li>Open daily, 10 AM to 10 PM</li></ul><p class="dx-bl-item-meta">Google rating: 4.8 out of 5 from 154 reviews (checked October 2026).</p><p class="dx-bl-item-highlight">It is on the podium level of Precinct Building 2 and open daily from 10 AM to 10 PM, which helps if you need a quick fitting.</p><a class="dx-bl-item-cta" href="http://www.thesewingcorner.ae/" rel="nofollow noopener" target="_blank">Visit website →</a></div><aside class="dx-bl-item-aside" aria-label="Contact The Sewing Corner"><span class="dx-bl-aside-label">Plan your visit</span><h3 class="dx-bl-aside-name">The Sewing Corner</h3><p>DIFC Podium Level, Precinct Building 2 (towards DIFC Parking), next to Bateel Cafe, Zaa'beel Second, DIFC, Dubai</p><p><a href="tel:+971526831974">+971 52 683 1974</a></p><a href="http://www.thesewingcorner.ae/" class="dx-bl-item-cta" rel="nofollow noopener" target="_blank">Official website</a></aside></article>
+</div>
+<section class="dx-bl-intro"><h2>How do I choose a tailor in DIFC?</h2><p>Start with what you need, whether that is a bespoke suit, a wedding outfit or simple alterations, and match it to the studio's services. Then check the location, booking options and whether a consultation is included before you commit.</p><h2>Do DIFC tailors offer home appointments?</h2><p>Some do, including Collars &amp; Cuffs, which offers home and office appointments, and My Tailor &amp; Little Things, which has a home visiting service. Check with each studio before booking, as availability can vary.</p><h2>Can I get a wedding suit made in DIFC?</h2><p>Several tailors in this guide offer wedding suits, including Stallion Bespoke, Collars &amp; Cuffs, House of Tailors and Bespoke Men's Tailor. Book a consultation early so there is time for fittings before the big day.</p><h2>Do I need to book a tailor in advance?</h2><p>Most bespoke work involves more than one fitting, so booking ahead helps you stay on schedule. For simple alterations you may be able to visit without an appointment, but check with the studio first.</p><h2>Are all of these tailors inside DIFC?</h2><p>Most are, but House of Tailors works from Business Bay, and Stallion Bespoke's Downtown Dubai studio is nearby rather than inside DIFC. Confirm the address on each website before you visit.</p><p><a href="/best/">More Best Of Dubai guides</a> · <a href="/submit-listing/">Add your business</a></p></section></main>
