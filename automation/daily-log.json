@@ -179,5 +179,32 @@
       "The Sewing Corner"
     ],
     "skips": []
+  },
+  {
+    "date": "2026-10-19",
+    "path": "/best/best-irish-pubs-in-dubai/",
+    "result": "published",
+    "source": "search-console",
+    "stats": {
+      "fetcher": "http",
+      "candidates": 8,
+      "sitesLoaded": 6,
+      "photosOffered": 7,
+      "accepted": 5,
+      "photoChosen": 3,
+      "withPhoto": 3
+    },
+    "businesses": [
+      "McGettigan's JLT",
+      "Fibber Magee's Irish Pub",
+      "McCafferty's Irish Bar & Restaurant JVC",
+      "McCafferty's Irish Bar & Restaurant Al Furjan",
+      "McCafferty's Irish Bar & Restaurant Wafi"
+    ],
+    "skips": [
+      "The Dubliner's: site did not load",
+      "The Irish Vicker's: site did not load",
+      "The Irish Village: No phone number is shown on the website text, so the listing cannot be published."
+    ]
   }
 ]

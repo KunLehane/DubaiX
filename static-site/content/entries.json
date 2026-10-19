@@ -202,5 +202,25 @@
         "title": "Tailors"
       }
     ]
+  },
+  {
+    "slug": "best-irish-pubs-in-dubai",
+    "path": "/best/best-irish-pubs-in-dubai/",
+    "kind": "best-list",
+    "title": "Best Irish Pubs in Dubai: 5 Pubs Worth a Visit",
+    "description": "Looking for the best Irish pubs in Dubai? Here are five to try, from live sport and live music to Sunday carvery and homely pub grub.",
+    "image": "/editorial-assets/irish-pubs-in-dubai-mcgettigan-s-jlt.png",
+    "published": "2026-10-19",
+    "content": "pages/best-irish-pubs-in-dubai.html",
+    "archives": [
+      {
+        "path": "/best/",
+        "title": "Best Of Dubai"
+      },
+      {
+        "path": "/best-category/irish-pubs/",
+        "title": "Irish Pubs"
+      }
+    ]
   }
 ]
