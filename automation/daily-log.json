@@ -206,5 +206,29 @@
       "The Irish Vicker's: site did not load",
       "The Irish Village: No phone number is shown on the website text, so the listing cannot be published."
     ]
+  },
+  {
+    "date": "2026-10-20",
+    "path": "/best/best-muay-thai-gyms-in-dubai-marina/",
+    "result": "too-few",
+    "source": "search-console",
+    "stats": {
+      "fetcher": "http",
+      "candidates": 8,
+      "sitesLoaded": 8,
+      "photosOffered": 12,
+      "accepted": 0,
+      "photoChosen": 0,
+      "withPhoto": 0
+    },
+    "skips": [
+      "TKMMAFIT: TKMMAFIT is listed at Shatha Tower, 9th Floor, Dubai Media City, which is not in or right beside Dubai Marina. It is also a multi-discipline MMA gym rather than a dedicated Muay Thai gym.",
+      "Fitness First Dubai Marina Gate: The website describes a general mixed fitness club (Fitness First Dubai Marina Gate) with boxing, cycling, hot yoga and gym studios. It does not offer Muay Thai or describe itself as a Muay Thai gym, so it does not fit the Muay Thai Gyms category.",
+      "The Marina Gym-24 hours Gym in Dubai Marina: The business is a 24-hour general fitness gym (The Marina Gym), not a Muay Thai gym. The website describes cardio, weights, personal training and sauna recovery, with no Muay Thai classes or training offered.",
+      "971 MMA & Fitness Academy: The website only states 'Dubai, UAE' as its location. It does not show a Dubai Marina address or any location in or beside Dubai Marina, so it cannot be listed in this guide. The business is also a multi-discipline academy led by BJJ and MMA rather than a Muay Thai gym.",
+      "KO8 Fitness DXB: KO8 Fitness DXB is a general fitness studio, not a Muay Thai gym. Its timetable lists Muay Thai only as one class (KO8 Kombat (Technique)) alongside Hyrox, circuit, strength, and kurves classes, so it does not fit the 'Muay Thai Gyms' category. It is located in Dubai Marina and shows a WhatsApp number, so the location and contact checks pass.",
+      "Colosseum Muay Thai: The website places the gym at Zabeel Road, Montana Building, Floor 601, and gives directions from Burjuman Metro Station. It is not located in or right beside Dubai Marina.",
+      "Muaythai Muppets: Classes take place at GymNation Al Quoz, Dubai, which is not in or beside Dubai Marina. The website also shows only an email address and no phone number."
+    ]
   }
 ]
