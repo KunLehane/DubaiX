@@ -30,7 +30,7 @@ export function renderEditorial(e,shell) {
   return shell.replace('{{MAIN}}',e.html).replace('{{META}}',meta);
 }
 export function card(e) {
-  return `<article class="dx-card" data-editorial-path="${e.path}"><a href="${e.path}"><img class="dx-card-image" src="${escape(e.image)}" alt="${escape(e.title)}" loading="lazy"><div class="dx-card-body"><span class="dx-card-meta">${e.kind==='best-list'?'Best Of Dubai':'Things To Do'}</span><h3>${escape(e.title)}</h3><p class="dx-card-summary">${escape(e.description)}</p></div></a></article>`;
+  return `<article class="dx-card" data-editorial-path="${e.path}"><a href="${e.path}"><img class="dx-card-image" src="${escape(e.image)}" alt="${escape(e.title)}" loading="lazy"><div class="dx-card-body"><span class="dx-card-meta">${escape(e.label||(e.kind==='best-list'?'Best Of Dubai':'Things To Do'))}</span><h3>${escape(e.title)}</h3><p class="dx-card-summary">${escape(e.description)}</p></div></a></article>`;
 }
 function replace(node,html) { node.parent.children=node.parent.children.flatMap(n=>n===node?parse(html).children:[n]); }
 function routeOf(href) {try {const u=new URL(href,origin);return ['dubaixtra.com','cms.dubaixtra.com','www.dubaixtra.com'].includes(u.host)?u.pathname:null;}catch{return null;}}
