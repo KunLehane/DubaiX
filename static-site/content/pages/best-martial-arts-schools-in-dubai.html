@@ -1,0 +1,391 @@
+<main id="primary" class="dx-single-best-list">
+<style>
+/* ═══ BREADCRUMBS ═══ */
+.dx-breadcrumbs {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 0;
+  font-size: 0.75rem;
+  color: var(--dx-mid-grey);
+  letter-spacing: 0.05em;
+}
+
+/* ═══ HERO ═══ */
+.dx-bl-hero {
+  position: relative;
+  min-height: 480px;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--dx-navy);
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+}
+.dx-bl-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(26,26,46,0.3), rgba(26,26,46,0.55) 50%, rgba(26,26,46,0.92));
+  pointer-events: none;
+}
+.dx-bl-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  width: 100%;
+}
+.dx-bl-hero h1 {
+  color: var(--dx-warm-white);
+  font-size: 4.5rem;
+  margin: 1rem 0 0.75rem;
+  line-height: 1.05;
+}
+.dx-bl-hero .section-label { color: var(--dx-gold); }
+.dx-bl-hero-meta {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.75);
+  letter-spacing: 0.06em;
+}
+.dx-bl-count-tag {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--dx-gold);
+  color: var(--dx-navy);
+  padding: 0.5rem 1rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 2px;
+}
+
+/* ═══ INTRO ═══ */
+.dx-bl-intro {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 1rem;
+}
+.dx-bl-intro p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+.dx-bl-intro p:first-of-type::first-letter {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4.5rem;
+  float: left;
+  line-height: 0.9;
+  margin: 0.4rem 0.6rem 0 0;
+  color: var(--dx-gold);
+  font-weight: 600;
+}
+
+/* ═══ METHODOLOGY ═══ */
+.dx-bl-methodology {
+  max-width: 760px;
+  margin: 0 auto 3rem;
+  padding: 0 1.5rem;
+}
+.dx-bl-methodology-box {
+  background: var(--dx-warm-white);
+  border-left: 3px solid var(--dx-gold);
+  padding: 1.5rem 1.75rem;
+}
+.dx-bl-methodology-box h2 {
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--dx-gold);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+.dx-bl-methodology-box p { margin: 0; font-size: 0.95rem; line-height: 1.7; color: var(--dx-text); }
+
+/* ═══ TABLE OF CONTENTS ═══ */
+.dx-bl-toc {
+  max-width: 760px;
+  margin: 0 auto 4rem;
+  padding: 0 1.5rem;
+}
+.dx-bl-toc-inner {
+  background: var(--dx-white);
+  border: 1px solid var(--dx-light-grey);
+  padding: 1.75rem 2rem;
+  border-radius: 2px;
+}
+.dx-bl-toc-inner h2 {
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--dx-mid-grey);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  margin: 0 0 1rem;
+}
+.dx-bl-toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  columns: 2;
+  column-gap: 2rem;
+}
+.dx-bl-toc-list li {
+  break-inside: avoid;
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
+}
+.dx-bl-toc-list a { color: var(--dx-navy); }
+.dx-bl-toc-list a:hover { color: var(--dx-gold); }
+.dx-bl-toc-num {
+  display: inline-block;
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--dx-gold);
+  font-weight: 700;
+  margin-right: 0.5rem;
+  min-width: 1.5rem;
+}
+
+/* ═══ ITEMS ═══ */
+.dx-bl-items { background: var(--dx-warm-white); padding: 2rem 0 4rem; }
+.dx-bl-item {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  display: grid;
+  grid-template-columns: 4fr 5fr 3fr;
+  gap: 2.5rem;
+  align-items: start;
+  border-bottom: 1px solid var(--dx-light-grey);
+}
+.dx-bl-item:last-child { border-bottom: none; }
+/* Grid items default to min-width: auto, which lets a large source photo's
+   natural size force its track (and the whole grid) wider than the
+   viewport. min-width: 0 lets every track shrink to the layout's actual
+   available space instead. */
+.dx-bl-item-img,
+.dx-bl-item-img-fallback,
+.dx-bl-item-content,
+.dx-bl-item-aside {
+  min-width: 0;
+}
+.dx-bl-item-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+.dx-bl-item-img-fallback {
+  width: 100%;
+  height: 420px;
+  background: var(--dx-light-grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 7rem;
+  color: var(--dx-gold);
+  font-weight: 600;
+}
+.dx-bl-item-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5rem;
+  color: var(--dx-gold);
+  font-weight: 700;
+  line-height: 0.9;
+  margin: 0 0 0.5rem;
+}
+.dx-bl-item-title {
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem;
+  line-height: 1.15;
+}
+.dx-bl-item-title a { color: var(--dx-navy); }
+.dx-bl-item-title a:hover { color: var(--dx-gold); }
+.dx-bl-item-meta {
+  font-size: 0.85rem;
+  color: var(--dx-mid-grey);
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+.dx-bl-item-desc {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--dx-text);
+  margin: 1rem 0;
+}
+.dx-bl-item-highlight {
+  background: var(--dx-white);
+  border: 1px solid var(--dx-light-grey);
+  padding: 0.85rem 1.25rem;
+  margin: 1.25rem 0;
+  font-size: 0.95rem;
+  border-left: 3px solid var(--dx-gold);
+}
+.dx-bl-item-highlight-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--dx-gold);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+.dx-bl-item-cta {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--dx-navy);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--dx-gold);
+  text-underline-offset: 4px;
+  margin-top: 1rem;
+  display: inline-block;
+}
+.dx-bl-item-cta:hover { color: var(--dx-gold); }
+
+/* Booking sidebar card per coach */
+.dx-bl-item-aside {
+  background: var(--dx-warm-white);
+  border: 1px solid var(--dx-light-grey);
+  padding: 1.75rem 1.5rem;
+  border-radius: 2px;
+  position: sticky;
+  top: 100px;
+}
+.dx-bl-aside-label {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--dx-gold);
+  margin-bottom: 0.5rem;
+}
+.dx-bl-aside-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  color: var(--dx-navy);
+  line-height: 1.2;
+}
+.dx-bl-aside-detail {
+  margin-bottom: 1rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--dx-light-grey);
+}
+.dx-bl-aside-detail-label {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dx-mid-grey);
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+.dx-bl-aside-detail-value {
+  font-size: 0.875rem;
+  color: var(--dx-text);
+  line-height: 1.4;
+}
+.dx-bl-aside-best-for {
+  background: var(--dx-white);
+  border-left: 3px solid var(--dx-gold);
+  padding: 0.6rem 0.85rem;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+.dx-bl-aside-best-for-label {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--dx-gold);
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+}
+.dx-bl-aside-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0.5rem 0 1rem;
+  padding: 0.85rem 1rem;
+}
+.dx-bl-aside-trust {
+  font-size: 0.7rem;
+  color: var(--dx-mid-grey);
+  margin: 0;
+  text-align: center;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+}
+.dx-bl-aside-no-link {
+  display: block;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--dx-mid-grey);
+  font-style: italic;
+  padding: 0.85rem 0;
+  margin-bottom: 1rem;
+  border-top: 1px solid var(--dx-light-grey);
+  border-bottom: 1px solid var(--dx-light-grey);
+}
+
+/* ═══ RELATED ═══ */
+.dx-related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Tablet - drop the booking aside below content (image left, content right, aside spans full width below) */
+@media (max-width: 1024px) {
+  .dx-bl-item {
+    grid-template-columns: 5fr 7fr;
+  }
+  .dx-bl-item-aside {
+    grid-column: 1 / -1;
+    position: static;
+    max-width: 480px;
+    margin: 0.5rem auto 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .dx-bl-hero { min-height: 380px; }
+  .dx-bl-hero h1 { font-size: 2.75rem; }
+  .dx-bl-toc-list { columns: 1; }
+  .dx-bl-item {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 3rem 1.5rem;
+  }
+  .dx-bl-item-img,
+  .dx-bl-item-img-fallback { height: 240px; }
+  .dx-bl-item-img-fallback { font-size: 4.5rem; }
+  .dx-bl-item-number { font-size: 3.5rem; }
+  .dx-bl-item-title { font-size: 1.75rem; }
+  .dx-related-grid { grid-template-columns: 1fr; }
+}
+
+.dx-jvc-guide figure{margin:0;min-width:0}.dx-jvc-guide figcaption{font-size:.75rem;margin-top:.6rem;color:var(--dx-mid-grey)}.dx-jvc-guide .dx-logo{object-fit:contain;padding:2rem;background:var(--dx-navy)}.dx-jvc-guide .dx-bl-item-aside{position:static}.dx-jvc-guide .dx-bl-item-img{height:300px}.dx-jvc-guide .dx-bl-intro p:first-of-type::first-letter{font:inherit;float:none;margin:0;color:inherit}.dx-jvc-guide .dx-bl-item-aside a{overflow-wrap:anywhere}.dx-jvc-guide .dx-bl-methodology-box h2{line-height:1.5}
+</style>
+<nav class="dx-breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/best/">Best Of Dubai</a> / Martial Arts Schools in Dubai</nav>
+<header class="dx-bl-hero" style="background-image:url('/editorial-assets/martial-arts-schools-in-dubai-the-warrior-academy-al-quoz.png')"><div class="dx-bl-hero-overlay" aria-hidden="true"></div><div class="dx-bl-hero-inner"><span class="section-label">Dubai Martial Arts Guide</span><h1>Best Martial Arts Schools in Dubai</h1><p class="dx-bl-hero-meta">Six dojos and clubs across Dubai, from kids' karate to Brazilian Jiu-Jitsu and Tai Chi.</p><span class="dx-bl-count-tag">6 local options · Updated October 2026</span></div></header>
+<section class="dx-bl-intro"><p>Dubai has a martial arts scene to suit almost every goal, from children learning their first kicks to adults looking for a serious workout or a confidence boost. The six schools below teach everything from taekwondo and Kung Fu to Muay Thai and Brazilian Jiu-Jitsu, across Al Quoz, Jaddaf, Motor City, Al Barsha South and The Sustainable City.</p><p>The schools are listed in no particular order. We researched each one from its official website and have not visited or trained at any of them, so check current timetables, class availability and trial offers directly with the school before you go.</p></section>
+<section class="dx-bl-methodology"><div class="dx-bl-methodology-box"><h2>How we chose these</h2><p>This is a researched editorial shortlist, not a ranked test, and the businesses are listed in no particular order. We checked locations, services and contact details against each business's official website in October 2026. We have not visited them in person. Confirm current opening hours, prices and availability directly with the business.</p><p>Images come from each business's own website, credited below.</p></div></section>
+<div class="dx-bl-items">
+<article class="dx-bl-item" id="pick-1"><figure><img class="dx-bl-item-img" src="/editorial-assets/martial-arts-schools-in-dubai-the-warrior-academy-al-quoz.png" alt="Instructor and child training in the dojo at The Warrior Academy Al Quoz" loading="lazy"><figcaption>Image: <a href="https://warrioracademy.ae/class-times/dubai-al-quoz-class-times/?utm_source=localmaps&amp;utm_medium=gmb&amp;utm_campaign=Al-Joud-Center" rel="nofollow noopener" target="_blank">The Warrior Academy Al Quoz</a>.</figcaption></figure><div class="dx-bl-item-content"><div class="dx-bl-item-number" aria-hidden="true">01</div><h2 class="dx-bl-item-title">The Warrior Academy Al Quoz</h2><p class="dx-bl-item-meta">A good fit for: Families and young children</p><p class="dx-bl-item-desc">The Warrior Academy Al Quoz teaches karate and taekwondo as part of a wider martial arts programme, using one syllabus for children and adults. Physical training builds strength and conditioning, and self-defence is taught in stages through the A.C.E system (Avoid, Control, Engage). Focus and self-control are practised in every session. Gradings are registered with the WKF and the UAE Karate Federation, so belts are recognised beyond the school. The academy suits children who want a dojo they enjoy attending each week, parents who want to train alongside their children, and students working towards competition karate.</p><p class="dx-bl-item-desc">Families can book a trial martial arts class through the website's Book a Class option. Classes are led by experienced instructors, and family classes put parents and children on the same mat, while adults are also welcome to train on their own. The school is located at Al Joud Centre, Office M16-1, 15A Street, Al Quoz, Dubai. Opening times vary by day, with weekend hours starting at 08:00.</p><h3 class="dx-bl-item-subhead">What they offer</h3><ul class="dx-bl-item-list"><li><strong>Kids karate and taekwondo classes</strong>: Children learn karate and taekwondo through one syllabus, with separate classes for Little Warriors (ages 2-3), Junior (ages 4-6), Senior (ages 7-9), Pre Teens (ages 10-12) and Teens (ages 13-18).</li><li><strong>Family classes</strong>: Parents and children train together on the same mat, and adults are welcome to train on their own as well.</li><li><strong>Self-defence training</strong>: Self-defence is taught in stages through the A.C.E system (Avoid, Control, Engage), so children learn to escape a grab and create distance.</li><li><strong>Weapons classes</strong>: Weapons classes are offered for students aged 6 and over.</li><li><strong>Sparring classes</strong>: Sparring classes are listed on the timetable for all ages.</li></ul><h3 class="dx-bl-item-subhead">Good to know</h3><ul class="dx-bl-item-list"><li>Classes capped at 13 students</li><li>Gradings registered with the WKF and the UAE Karate Federation</li><li>Open seven days a week</li><li>Monthly one-to-one parent calls</li></ul><p class="dx-bl-item-meta">Google rating: 4.9 out of 5 from 1100 reviews (checked October 2026).</p><p class="dx-bl-item-highlight">Ask whether a family class fits your schedule, as parents and siblings can train alongside children at the Al Joud Centre.</p><a class="dx-bl-item-cta" href="https://warrioracademy.ae/class-times/dubai-al-quoz-class-times/?utm_source=localmaps&amp;utm_medium=gmb&amp;utm_campaign=Al-Joud-Center" rel="nofollow noopener" target="_blank">Visit website →</a></div><aside class="dx-bl-item-aside" aria-label="Contact The Warrior Academy Al Quoz"><span class="dx-bl-aside-label">Plan your visit</span><h3 class="dx-bl-aside-name">The Warrior Academy Al Quoz</h3><p>Al Joud Centre, Office M16-1, 15A Street, Al Quoz, Dubai</p><p><a href="tel:+971585424089">+971 58 542 4089</a></p><a href="https://warrioracademy.ae/class-times/dubai-al-quoz-class-times/?utm_source=localmaps&amp;utm_medium=gmb&amp;utm_campaign=Al-Joud-Center" class="dx-bl-item-cta" rel="nofollow noopener" target="_blank">Official website</a></aside></article>
+<article class="dx-bl-item" id="pick-2"><figure><img class="dx-bl-item-img" src="/editorial-assets/martial-arts-schools-in-dubai-midtown-martial-arts-club.jpg" alt="Kickboxing group in front of the Midtown Martial Arts Club wall logo, Jaddaf" loading="lazy"><figcaption>Image: <a href="http://www.midtowngcc.com/" rel="nofollow noopener" target="_blank">Midtown Martial Arts Club</a>.</figcaption></figure><div class="dx-bl-item-content"><div class="dx-bl-item-number" aria-hidden="true">02</div><h2 class="dx-bl-item-title">Midtown Martial Arts Club</h2><p class="dx-bl-item-meta">A good fit for: Adult kickboxing and fitness training</p><p class="dx-bl-item-desc">Midtown Martial Arts Club teaches kickboxing and karate, with self-defence training also offered. Its motto is 'Fit for Life', and the classes aim to support a healthier and safer way of living, building fitness, strength and confidence for everyday life. The club states that its philosophy emphasises self-control, respect for others and a positive outlook. Students can train in kickboxing, karate and self-defence, with the aim of helping each person reach a level they are comfortable with.</p><p class="dx-bl-item-desc">The classes suit beginners through to black belts, and both adults and children are welcome. Kickboxing sessions run on Monday, Wednesday and Friday from 7pm to 10pm, while karate classes take place on Tuesday, Thursday and Saturday from 4pm to 7pm, including an after-school kids group. Each class lasts one hour, and other times are available on request. To get started, prospective students can book a free trial or contact the team for more information. The dojo is in Jaddaf, Dubai.</p><h3 class="dx-bl-item-subhead">What they offer</h3><ul class="dx-bl-item-list"><li><strong>Kickboxing classes</strong>: Kickboxing classes are open to all levels and run for both kids and adults. Sessions are one hour long.</li><li><strong>Karate classes</strong>: Karate classes are offered for all levels, including an after-school kids group. Adults can also join these sessions.</li><li><strong>Self-defence training</strong>: Self-defence training is taught alongside kickboxing and karate to help build confidence for everyday life.</li><li><strong>Personal classes</strong>: Personal classes are available in self-defence, karate and kickboxing for adults and children.</li></ul><h3 class="dx-bl-item-subhead">Good to know</h3><ul class="dx-bl-item-list"><li>Free trial session available</li><li>Monthly and annual memberships available</li><li>Closed on Sundays</li></ul><p class="dx-bl-item-meta">Google rating: 5.0 out of 5 from 152 reviews (checked October 2026).</p><p class="dx-bl-item-highlight">Book the free trial session before committing to a monthly or annual membership.</p><a class="dx-bl-item-cta" href="http://www.midtowngcc.com/" rel="nofollow noopener" target="_blank">Visit website →</a></div><aside class="dx-bl-item-aside" aria-label="Contact Midtown Martial Arts Club"><span class="dx-bl-aside-label">Plan your visit</span><h3 class="dx-bl-aside-name">Midtown Martial Arts Club</h3><p>Jaddaf</p><p><a href="tel:+971556096843">+971 55 609 6843</a></p><a href="http://www.midtowngcc.com/" class="dx-bl-item-cta" rel="nofollow noopener" target="_blank">Official website</a></aside></article>
+<article class="dx-bl-item" id="pick-3"><figure><img class="dx-bl-item-img" src="/editorial-assets/martial-arts-schools-in-dubai-phoenix-black-belt-academy.jpg" alt="Phoenix Black Belt Academy students and instructors with a trophy at a UAE martial arts event" loading="lazy"><figcaption>Image: <a href="http://martialartsdubai.com/" rel="nofollow noopener" target="_blank">Phoenix Black Belt Academy</a>.</figcaption></figure><div class="dx-bl-item-content"><div class="dx-bl-item-number" aria-hidden="true">03</div><h2 class="dx-bl-item-title">Phoenix Black Belt Academy</h2><p class="dx-bl-item-meta">A good fit for: Traditional taekwondo with belt progression</p><p class="dx-bl-item-desc">Phoenix Black Belt Academy says its single focus since it was founded in 2011 is developing students' physical fitness, confidence, good character and personal self-defence. Training uses traditional Tae Kwon Do techniques within a structured regime that aims to improve conditioning, stamina, balance and mental focus. Students progress at their own pace through the belt levels, and the academy describes the black belt as the end of a step-by-step path.</p><p class="dx-bl-item-desc">The academy runs three age groups for younger students: Mighty Tigers for ages 4 to 6, Children for ages 7 to 11, and Youth for ages 12 and over, who then transition to adult Tae Kwon Do. Adult students train for self-defence, weight management and stress management, and the academy highlights the friendships formed in class. To find out more, contact the academy by phone or email, or visit a class. Classes run on Sunday, Monday, Tuesday, Wednesday and Saturday at Warehouse #14, Al Quoz Industrial Area 4.</p><h3 class="dx-bl-item-subhead">What they offer</h3><ul class="dx-bl-item-list"><li><strong>Mighty Tigers (ages 4-6)</strong>: Fun and challenging martial arts classes for young children. The programme is designed to help children build confidence and make new friends.</li><li><strong>Children (ages 7-11)</strong>: Interactive martial arts classes that help children build confidence and make new friends. Students progress through the belt levels at their own pace.</li><li><strong>Youth (ages 12+)</strong>: A martial arts programme for students aged 12 and over, who transition to adult Tae Kwon Do as they progress.</li><li><strong>Adult program</strong>: Classes for adults focused on self-defence, weight management, memory through learning new techniques at each belt level, and stress management within a strong community.</li></ul><h3 class="dx-bl-item-subhead">Good to know</h3><ul class="dx-bl-item-list"><li>Classes for ages 4 and up</li><li>Open Sunday, Monday, Tuesday, Wednesday and Saturday</li><li>Several membership programmes and special offers</li></ul><p class="dx-bl-item-meta">Google rating: 4.8 out of 5 from 135 reviews (checked October 2026).</p><p class="dx-bl-item-highlight">Contact the academy by phone or email to ask which group suits your child's age.</p><a class="dx-bl-item-cta" href="http://martialartsdubai.com/" rel="nofollow noopener" target="_blank">Visit website →</a></div><aside class="dx-bl-item-aside" aria-label="Contact Phoenix Black Belt Academy"><span class="dx-bl-aside-label">Plan your visit</span><h3 class="dx-bl-aside-name">Phoenix Black Belt Academy</h3><p>Street 25, Warehouse #14, Al Quoz Industrial Area 4, Dubai, UAE</p><p><a href="tel:+971507652502">(971) 50 765 2502</a></p><a href="http://martialartsdubai.com/" class="dx-bl-item-cta" rel="nofollow noopener" target="_blank">Official website</a></aside></article>
+<article class="dx-bl-item" id="pick-4"><figure><img class="dx-bl-item-img" src="/editorial-assets/martial-arts-schools-in-dubai-evolve-martial-arts-and-gymnastics-uae.jpg" alt="Young students training in Evolve martial arts uniforms at Evolve Academy, Motor City" loading="lazy"><figcaption>Image: <a href="http://www.evolveuae.org/" rel="nofollow noopener" target="_blank">EVOLVE Martial Arts &amp; Gymnastics UAE</a>.</figcaption></figure><div class="dx-bl-item-content"><div class="dx-bl-item-number" aria-hidden="true">04</div><h2 class="dx-bl-item-title">EVOLVE Martial Arts &amp; Gymnastics UAE</h2><p class="dx-bl-item-meta">A good fit for: After-school clubs and holiday camps</p><p class="dx-bl-item-desc">Evolve Sports describes itself as a comprehensive sports academy, with specialised martial arts programmes, after-school clubs and holiday camps. The academy sets out three core values: honesty and transparency, family and community, and respect and etiquette. Respect is central to its approach, and students are expected to bow upon entering the dojo and to treat office staff courteously. Parents receive regular, detailed feedback from expert coaches on their child's progress.</p><p class="dx-bl-item-desc">The academy suits children and adults, and it describes a friendly, comfortable and family-like atmosphere for students and parents. Visitors can select Book a Class on the website, or get in touch by phone, WhatsApp or the enquiry form. The site lists opening hours of 10:00 to 18:00. The academy is located in Motor City, Dubai.</p><h3 class="dx-bl-item-subhead">What they offer</h3><ul class="dx-bl-item-list"><li><strong>Martial arts programmes</strong>: Specialised martial arts classes for children and adults, taught by expert coaches. Students are taught etiquette and respect as part of the training.</li><li><strong>Sports academy</strong>: A comprehensive sports academy offering structured programmes alongside its martial arts training. Parents receive regular, detailed feedback on progress.</li><li><strong>After-school clubs</strong>: After-school clubs run alongside the academy's main programmes for children.</li><li><strong>Holiday camps</strong>: Holiday camps offered during school breaks, including specialised martial arts programmes.</li></ul><h3 class="dx-bl-item-subhead">Good to know</h3><ul class="dx-bl-item-list"><li>Opening hours 10:00 to 18:00</li><li>Regular, detailed feedback from expert coaches</li><li>Over 12 years serving the community in Motor City</li></ul><p class="dx-bl-item-meta">Google rating: 4.3 out of 5 from 77 reviews (checked October 2026).</p><p class="dx-bl-item-highlight">Look at the holiday camps if you need structured activities for children during school breaks.</p><a class="dx-bl-item-cta" href="http://www.evolveuae.org/" rel="nofollow noopener" target="_blank">Visit website →</a></div><aside class="dx-bl-item-aside" aria-label="Contact EVOLVE Martial Arts &amp; Gymnastics UAE"><span class="dx-bl-aside-label">Plan your visit</span><h3 class="dx-bl-aside-name">EVOLVE Martial Arts &amp; Gymnastics UAE</h3><p>Motor City</p><p><a href="tel:+971585767012">+971 58 576 7012</a></p><a href="http://www.evolveuae.org/" class="dx-bl-item-cta" rel="nofollow noopener" target="_blank">Official website</a></aside></article>
+<article class="dx-bl-item" id="pick-5"><div class="dx-bl-item-img-fallback" aria-hidden="true">S</div><div class="dx-bl-item-content"><div class="dx-bl-item-number" aria-hidden="true">05</div><h2 class="dx-bl-item-title">Shaolin Kung Fu</h2><p class="dx-bl-item-meta">A good fit for: Kung Fu, Tai Chi and balance</p><p class="dx-bl-item-desc">Shaolin Kung Fu offers traditional Chinese martial arts training, with Kung Fu and Tai Chi as its core subjects. The website describes its instructors as trained in traditional techniques, aiming to give each student authentic knowledge, precise guidance and a safe learning experience. The club states that it suits people of all age groups and skill levels, and it presents its programmes as a journey rooted in discipline, respect and cultural heritage. The site also lists benefits it associates with Kung Fu, including focus, self-defence, confidence, health, self-discipline, courage, respect, safety awareness and leadership.</p><p class="dx-bl-item-desc">Visits begin with a free class, which can be booked through the website's Book a Free Class option. The club is located at M11, The Light Commercial Tower, Al Barsha South Third, Arjan, Dubai, UAE. Contact is available by phone on +971 50 573 5482 or by email at uaeshaolin@gmail.com. Fees and timings sit on a separate page on the website.</p><h3 class="dx-bl-item-subhead">What they offer</h3><ul class="dx-bl-item-list"><li><strong>Kung Fu classes</strong>: Training covers classical Kung Fu forms, practical self-defence, joint manipulation and throws, and traditional animal styles. The site states that instructors are trained in traditional techniques.</li><li><strong>Tai Chi</strong>: Tai Chi is taught for balance, health and inner peace, as stated on the club's website.</li><li><strong>Customised programmes</strong>: Programmes are offered for all age groups and skill levels, with the aim of creating a meaningful journey for each student.</li><li><strong>Free class booking</strong>: Prospective students can book a free class through the website before committing.</li></ul><h3 class="dx-bl-item-subhead">Good to know</h3><ul class="dx-bl-item-list"><li>Free class can be booked on the website</li><li>Programmes for all age groups and skill levels</li><li>Teaches Chinese Kung Fu and Tai Chi</li></ul><p class="dx-bl-item-meta">Google rating: 4.7 out of 5 from 50 reviews (checked October 2026).</p><p class="dx-bl-item-highlight">Mention your goals when you get in touch, as the club offers customised programmes for different skill levels.</p><a class="dx-bl-item-cta" href="http://www.shaolin.ae/" rel="nofollow noopener" target="_blank">Visit website →</a></div><aside class="dx-bl-item-aside" aria-label="Contact Shaolin Kung Fu"><span class="dx-bl-aside-label">Plan your visit</span><h3 class="dx-bl-aside-name">Shaolin Kung Fu</h3><p>M11-The Light Commercial Tower - Al Barsha South Third, Arjan - Dubai - UAE</p><p><a href="tel:+971505735482">+971 50 573 5482</a></p><a href="http://www.shaolin.ae/" class="dx-bl-item-cta" rel="nofollow noopener" target="_blank">Official website</a></aside></article>
+<article class="dx-bl-item" id="pick-6"><figure><img class="dx-bl-item-img" src="/editorial-assets/martial-arts-schools-in-dubai-ch-martial-arts-academy.png" alt="Young students in training gis at CH Martial Arts Academy, The Sustainable City, Dubai" loading="lazy"><figcaption>Image: <a href="http://chacademy.ae/" rel="nofollow noopener" target="_blank">CH Martial Arts Academy</a>.</figcaption></figure><div class="dx-bl-item-content"><div class="dx-bl-item-number" aria-hidden="true">06</div><h2 class="dx-bl-item-title">CH Martial Arts Academy</h2><p class="dx-bl-item-meta">A good fit for: Muay Thai and Jiu-Jitsu for teens</p><p class="dx-bl-item-desc">CH Martial Arts Academy teaches Brazilian Jiu-Jitsu, a ground fighting and submission grappling art that the academy says emphasises technique and leverage over strength. Classes are split by age, from Little Grapplers for ages 4 to 6 to Youth Champions for ages 11 and over. Adults can join a male Brazilian Jiu-Jitsu class for all levels or a Ladies Muay Thai class.</p><p class="dx-bl-item-desc">The academy is led by founder and head coach Hind Charifi, with coaches Ali Saryev, Aya Shanti and Hamza Tahir listed on the website. Private classes are available, and the site points visitors to a class schedule and a contact page. The academy is based in The Sustainable City, Dubai, UAE, and can be reached on +971 58 512 3523 or info@chacademy.ae.</p><h3 class="dx-bl-item-subhead">What they offer</h3><ul class="dx-bl-item-list"><li><strong>Little Grapplers (Ages 4-6)</strong>: Brazilian Jiu-Jitsu classes for young children, aimed at building strength, confidence and discipline on the mat.</li><li><strong>Junior Warriors (Ages 7-10)</strong>: Brazilian Jiu-Jitsu training for children that focuses on respect, discipline and skills for life.</li><li><strong>Youth Champions (Ages 11+)</strong>: Brazilian Jiu-Jitsu classes for teens, preparing them for challenges on the mats and beyond.</li><li><strong>Ladies Muay Thai Class</strong>: Muay Thai classes for women, designed to build strength, confidence and self-defence skills.</li><li><strong>Private Classes</strong>: Private training sessions are listed on the website, though the site gives no further detail about them.</li></ul><h3 class="dx-bl-item-subhead">Good to know</h3><ul class="dx-bl-item-list"><li>Private classes listed on the website</li><li>Programmes for children from age 4</li><li>Founder is the first Moroccan female to gain a black belt in Brazilian Jiu-Jitsu</li></ul><p class="dx-bl-item-meta">Google rating: 5.0 out of 5 from 34 reviews (checked October 2026).</p><p class="dx-bl-item-highlight">Women can join the ladies Muay Thai class, or book private classes if you prefer one-to-one coaching.</p><a class="dx-bl-item-cta" href="http://chacademy.ae/" rel="nofollow noopener" target="_blank">Visit website →</a></div><aside class="dx-bl-item-aside" aria-label="Contact CH Martial Arts Academy"><span class="dx-bl-aside-label">Plan your visit</span><h3 class="dx-bl-aside-name">CH Martial Arts Academy</h3><p>The Sustainable City</p><p><a href="tel:+971585123523">+971 58 512 3523</a></p><a href="http://chacademy.ae/" class="dx-bl-item-cta" rel="nofollow noopener" target="_blank">Official website</a></aside></article>
+</div>
+<section class="dx-bl-intro"><h2>What martial arts are taught in Dubai?</h2><p>Dubai's martial arts schools cover a wide range of disciplines, including karate, taekwondo, kickboxing, Muay Thai, Brazilian Jiu-Jitsu, Kung Fu and Tai Chi. Many schools also offer self-defence and sparring alongside their core styles.</p><h2>Are there martial arts classes for kids in Dubai?</h2><p>Several schools in Dubai run programmes for children, with many grouping students by age so younger beginners train separately from older ones. Some also offer family classes, so parents and siblings can take part too.</p><h2>Do martial arts schools in Dubai offer free trials?</h2><p>Some schools offer free trial sessions, so it is worth asking before you sign up to a membership. Trial availability can change, so confirm with the school directly.</p><h2>Is martial arts good for self-defence in Dubai?</h2><p>Many of the schools in this guide include practical self-defence training alongside their main styles. Look for classes that suit your experience level and ask the instructors how they teach real-world techniques.</p><h2>Can adults start martial arts classes in Dubai?</h2><p>Adults can join beginner classes at most of the schools listed here, and several offer adult programmes or personal lessons. Choosing a class that matches your fitness and goals will help you settle in quickly.</p><p><a href="/best/">More Best Of Dubai guides</a> · <a href="/submit-listing/">Add your business</a></p></section></main>

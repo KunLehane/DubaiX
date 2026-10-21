@@ -222,5 +222,25 @@
         "title": "Irish Pubs"
       }
     ]
+  },
+  {
+    "slug": "best-martial-arts-schools-in-dubai",
+    "path": "/best/best-martial-arts-schools-in-dubai/",
+    "kind": "best-list",
+    "title": "Best Martial Arts Schools in Dubai | Dubai Xtra",
+    "description": "Find six martial arts schools in Dubai, from kids' karate and taekwondo to kickboxing, Kung Fu, Tai Chi and Brazilian Jiu-Jitsu, across the city.",
+    "image": "/editorial-assets/martial-arts-schools-in-dubai-the-warrior-academy-al-quoz.png",
+    "published": "2026-10-21",
+    "content": "pages/best-martial-arts-schools-in-dubai.html",
+    "archives": [
+      {
+        "path": "/best/",
+        "title": "Best Of Dubai"
+      },
+      {
+        "path": "/best-category/martial-arts-schools/",
+        "title": "Martial Arts Schools"
+      }
+    ]
   }
 ]

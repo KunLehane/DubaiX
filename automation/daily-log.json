@@ -230,5 +230,29 @@
       "Colosseum Muay Thai: The website places the gym at Zabeel Road, Montana Building, Floor 601, and gives directions from Burjuman Metro Station. It is not located in or right beside Dubai Marina.",
       "Muaythai Muppets: Classes take place at GymNation Al Quoz, Dubai, which is not in or beside Dubai Marina. The website also shows only an email address and no phone number."
     ]
+  },
+  {
+    "date": "2026-10-21",
+    "path": "/best/best-martial-arts-schools-in-dubai/",
+    "result": "published",
+    "source": "search-console",
+    "stats": {
+      "fetcher": "http",
+      "candidates": 8,
+      "sitesLoaded": 8,
+      "photosOffered": 13,
+      "accepted": 6,
+      "photoChosen": 5,
+      "withPhoto": 5
+    },
+    "businesses": [
+      "The Warrior Academy Al Quoz",
+      "Midtown Martial Arts Club",
+      "Phoenix Black Belt Academy",
+      "EVOLVE Martial Arts & Gymnastics UAE",
+      "Shaolin Kung Fu",
+      "CH Martial Arts Academy"
+    ],
+    "skips": []
   }
 ]
