@@ -242,5 +242,25 @@
         "title": "Martial Arts Schools"
       }
     ]
+  },
+  {
+    "slug": "best-visa-and-pro-services-in-dubai",
+    "path": "/best/best-visa-and-pro-services-in-dubai/",
+    "kind": "best-list",
+    "title": "Best Visa and PRO Services in Dubai",
+    "description": "Compare four visa and PRO services in Dubai, from family and freelance visas to business setup and Schengen processing. Based on official sites.",
+    "image": "/editorial-assets/the-custom-shop-circle-mall.jpg",
+    "published": "2026-10-22",
+    "content": "pages/best-visa-and-pro-services-in-dubai.html",
+    "archives": [
+      {
+        "path": "/best/",
+        "title": "Best Of Dubai"
+      },
+      {
+        "path": "/best-category/visa-and-pro-services/",
+        "title": "Visa and PRO Services"
+      }
+    ]
   }
 ]

@@ -254,5 +254,31 @@
       "CH Martial Arts Academy"
     ],
     "skips": []
+  },
+  {
+    "date": "2026-10-22",
+    "path": "/best/best-visa-and-pro-services-in-dubai/",
+    "result": "published",
+    "source": "claude-plan",
+    "stats": {
+      "fetcher": "http",
+      "candidates": 7,
+      "sitesLoaded": 6,
+      "photosOffered": 3,
+      "accepted": 4,
+      "photoChosen": 0,
+      "withPhoto": 0
+    },
+    "businesses": [
+      "PRO VISA UAE",
+      "PRO Services in Dubai",
+      "VisaHelp",
+      "VPSDubai - Visa Pro Services"
+    ],
+    "skips": [
+      "PRO Services Dubai: site did not load",
+      "The Visa Guy- Visa Services Dubai: No phone number is shown in the website text. The only reference is a 'Phone Number' form field label, so the listing cannot meet the requirement for a visible phone number.",
+      "Visa Pro Documents Clearing Services L.L.C: The fetched website text contains only the page title 'Visa Pro - Professional Visa & Travel Services'. It shows no phone number, no services, no address or district, and no other content to confirm a Dubai location, so the listing cannot be verified."
+    ]
   }
 ]
