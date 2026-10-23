@@ -262,5 +262,25 @@
         "title": "Visa and PRO Services"
       }
     ]
+  },
+  {
+    "slug": "best-business-setup-companies-in-dubai",
+    "path": "/best/best-business-setup-companies-in-dubai/",
+    "kind": "best-list",
+    "title": "Best Business Setup Companies in Dubai (2025 Guide)",
+    "description": "Compare four visa and PRO services in Dubai for business setup, family and freelance visas, Golden Visa and document clearance. Based on official websites.",
+    "image": "/editorial-assets/the-custom-shop-circle-mall.jpg",
+    "published": "2026-10-23",
+    "content": "pages/best-business-setup-companies-in-dubai.html",
+    "archives": [
+      {
+        "path": "/best/",
+        "title": "Best Of Dubai"
+      },
+      {
+        "path": "/best-category/visa-and-pro-services/",
+        "title": "Visa and PRO Services"
+      }
+    ]
   }
 ]
