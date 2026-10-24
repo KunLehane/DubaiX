@@ -282,5 +282,25 @@
         "title": "Visa and PRO Services"
       }
     ]
+  },
+  {
+    "slug": "best-commercial-real-estate-brokers-in-dubai",
+    "path": "/best/best-commercial-real-estate-brokers-in-dubai/",
+    "kind": "best-list",
+    "title": "Best Commercial Real Estate Brokers in Dubai",
+    "description": "Compare six Dubai commercial real estate brokers by service, location and fit, with practical tips to help you choose one.",
+    "image": "/editorial-assets/commercial-real-estate-brokers-in-dubai-white-and-co-real-estate-llc.webp",
+    "published": "2026-10-24",
+    "content": "pages/best-commercial-real-estate-brokers-in-dubai.html",
+    "archives": [
+      {
+        "path": "/best/",
+        "title": "Best Of Dubai"
+      },
+      {
+        "path": "/best-category/real-estate/",
+        "title": "Real Estate"
+      }
+    ]
   }
 ]

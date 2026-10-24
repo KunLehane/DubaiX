@@ -306,5 +306,29 @@
       "The Visa Guy- Visa Services Dubai: No phone number is shown in the website text. The site offers only a chat option, a visa application form and an 'Explore' menu, so the listing cannot meet the phone requirement.",
       "Visa Pro Documents Clearing Services L.L.C: The website text provided contains only a page title ('Visa Pro - Professional Visa & Travel Services'). It shows no phone number, no address and no service details, so the business cannot be verified as located in Dubai or listed with a usable contact number."
     ]
+  },
+  {
+    "date": "2026-10-24",
+    "path": "/best/best-commercial-real-estate-brokers-in-dubai/",
+    "result": "published",
+    "source": "claude-plan",
+    "stats": {
+      "fetcher": "http",
+      "candidates": 8,
+      "sitesLoaded": 8,
+      "photosOffered": 12,
+      "accepted": 6,
+      "photoChosen": 3,
+      "withPhoto": 3
+    },
+    "businesses": [
+      "Harbor Real Estate Broker LLC",
+      "White & Co Real Estate LLC",
+      "Dacha Real Estate",
+      "McCone Properties",
+      "Al Ayan Real Estate Broker LLC",
+      "Espace"
+    ],
+    "skips": []
   }
 ]
