@@ -302,5 +302,25 @@
         "title": "Real Estate"
       }
     ]
+  },
+  {
+    "slug": "best-property-management-companies-in-dubai",
+    "path": "/best/best-property-management-companies-in-dubai/",
+    "kind": "best-list",
+    "title": "Best Property Management Companies in Dubai",
+    "description": "Compare six property management companies in Dubai, from Business Bay to The Greens. See what each offers and which one suits your property.",
+    "image": "/editorial-assets/property-management-companies-in-dubai-d-and-b-properties.jpg",
+    "published": "2026-10-25",
+    "content": "pages/best-property-management-companies-in-dubai.html",
+    "archives": [
+      {
+        "path": "/best/",
+        "title": "Best Of Dubai"
+      },
+      {
+        "path": "/best-category/real-estate/",
+        "title": "Real Estate"
+      }
+    ]
   }
 ]

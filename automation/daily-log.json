@@ -330,5 +330,31 @@
       "Espace"
     ],
     "skips": []
+  },
+  {
+    "date": "2026-10-25",
+    "path": "/best/best-property-management-companies-in-dubai/",
+    "result": "published",
+    "source": "claude-plan",
+    "stats": {
+      "fetcher": "http",
+      "candidates": 8,
+      "sitesLoaded": 7,
+      "photosOffered": 12,
+      "accepted": 6,
+      "photoChosen": 3,
+      "withPhoto": 3
+    },
+    "businesses": [
+      "D&B Properties",
+      "Harbor Real Estate Broker LLC",
+      "White & Co Real Estate LLC",
+      "Dacha Real Estate",
+      "McCone Properties",
+      "Homes 4 Life Real Estate Broker LLC"
+    ],
+    "skips": [
+      "Driven Properties LLC - HQ: site did not load"
+    ]
   }
 ]
