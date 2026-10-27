@@ -356,5 +356,30 @@
     "skips": [
       "Driven Properties LLC - HQ: site did not load"
     ]
+  },
+  {
+    "date": "2026-10-27",
+    "path": "/best/best-golden-visa-consultants-in-dubai/",
+    "result": "published",
+    "source": "claude-plan",
+    "stats": {
+      "fetcher": "http",
+      "candidates": 7,
+      "sitesLoaded": 5,
+      "photosOffered": 4,
+      "accepted": 4,
+      "photoChosen": 0,
+      "withPhoto": 0
+    },
+    "businesses": [
+      "PRO VISA UAE",
+      "PRO Services Dubai",
+      "PRO Services in Dubai",
+      "VPSDubai"
+    ],
+    "skips": [
+      "Virtual PRO: site did not load",
+      "The Visa Guy- Visa Services Dubai: No phone number is shown in the website text. The site has a 'Phone Number' form field and a chat option, but no actual telephone number."
+    ]
   }
 ]

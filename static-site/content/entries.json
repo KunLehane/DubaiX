@@ -322,5 +322,25 @@
         "title": "Real Estate"
       }
     ]
+  },
+  {
+    "slug": "best-golden-visa-consultants-in-dubai",
+    "path": "/best/best-golden-visa-consultants-in-dubai/",
+    "kind": "best-list",
+    "title": "Best Golden Visa Consultants in Dubai | Dubai Xtra",
+    "description": "Four Dubai visa and PRO firms to consider for Golden Visa and related paperwork, compared from their official websites. Read our notes before you apply.",
+    "image": "/editorial-assets/the-custom-shop-circle-mall.jpg",
+    "published": "2026-10-27",
+    "content": "pages/best-golden-visa-consultants-in-dubai.html",
+    "archives": [
+      {
+        "path": "/best/",
+        "title": "Best Of Dubai"
+      },
+      {
+        "path": "/best-category/visa-and-pro-services/",
+        "title": "Visa and PRO Services"
+      }
+    ]
   }
 ]
