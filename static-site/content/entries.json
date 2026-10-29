@@ -342,5 +342,25 @@
         "title": "Visa and PRO Services"
       }
     ]
+  },
+  {
+    "slug": "best-accountants-and-vat-consultants-in-dubai",
+    "path": "/best/best-accountants-and-vat-consultants-in-dubai/",
+    "kind": "best-list",
+    "title": "Best Accountants and VAT Consultants in Dubai",
+    "description": "Five Dubai business services for accounting, bookkeeping, VAT and corporate tax, researched from their official websites. Compare what each firm offers.",
+    "image": "/editorial-assets/accountants-and-vat-consultants-in-dubai-dubiz-business-setup.webp",
+    "published": "2026-10-29",
+    "content": "pages/best-accountants-and-vat-consultants-in-dubai.html",
+    "archives": [
+      {
+        "path": "/best/",
+        "title": "Best Of Dubai"
+      },
+      {
+        "path": "/best-category/business-services/",
+        "title": "Business Services"
+      }
+    ]
   }
 ]

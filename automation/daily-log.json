@@ -381,5 +381,32 @@
       "Virtual PRO: site did not load",
       "The Visa Guy- Visa Services Dubai: No phone number is shown in the website text. The site has a 'Phone Number' form field and a chat option, but no actual telephone number."
     ]
+  },
+  {
+    "date": "2026-10-29",
+    "path": "/best/best-accountants-and-vat-consultants-in-dubai/",
+    "result": "published",
+    "source": "claude-plan",
+    "stats": {
+      "fetcher": "http",
+      "candidates": 8,
+      "sitesLoaded": 8,
+      "photosOffered": 12,
+      "accepted": 5,
+      "photoChosen": 2,
+      "withPhoto": 2
+    },
+    "businesses": [
+      "Commitbiz LLC",
+      "Dubiz Business Setup",
+      "3S Business Services LLC",
+      "Start Business Services",
+      "XYZ Business Services"
+    ],
+    "skips": [
+      "Shuraa Business Setup (Main Branch Dubai & UAE): phone not on site",
+      "Business Link UAE - Business Setup in Dubai | UAE: Business Link UAE is a business setup and company formation consultancy (licences, free zone and mainland setup, PRO and visa services). The site does not describe accounting, bookkeeping or VAT services. Corporate Tax appears only as a menu label with no service detail, so it does not make the business an accountant or VAT consultant for this guide.",
+      "Business Setup In Dubai - Company Setup UAE: The website is primarily a business setup and company formation consultancy, with licensing, free zone packages and visa support at its core. Tax and VAT support is one service among many (alongside M&A, banking, trust setup, marriage assistance and IT services), so it does not clearly fit the Accountants and VAT Consultants guide. The site also shows template placeholder contact details and no street address."
+    ]
   }
 ]
