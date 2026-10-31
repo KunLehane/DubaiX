@@ -408,5 +408,23 @@
       "Business Link UAE - Business Setup in Dubai | UAE: Business Link UAE is a business setup and company formation consultancy (licences, free zone and mainland setup, PRO and visa services). The site does not describe accounting, bookkeeping or VAT services. Corporate Tax appears only as a menu label with no service detail, so it does not make the business an accountant or VAT consultant for this guide.",
       "Business Setup In Dubai - Company Setup UAE: The website is primarily a business setup and company formation consultancy, with licensing, free zone packages and visa support at its core. Tax and VAT support is one service among many (alongside M&A, banking, trust setup, marriage assistance and IT services), so it does not clearly fit the Accountants and VAT Consultants guide. The site also shows template placeholder contact details and no street address."
     ]
+  },
+  {
+    "date": "2026-10-31",
+    "path": "/best/best-holiday-home-operators-in-dubai/",
+    "result": "too-few",
+    "source": "claude-plan",
+    "stats": {
+      "fetcher": "http",
+      "candidates": 3,
+      "sitesLoaded": 3,
+      "photosOffered": 4,
+      "accepted": 0,
+      "photoChosen": 0,
+      "withPhoto": 0
+    },
+    "skips": [
+      "PK Holiday Homes | Short term rentals Dubai: The fetched website text contains only a page title ('PK Properties | Luxury Real Estate & Holiday Homes in Dubai & Abu Dhabi'). It shows no phone number, services, address, or photos, and the site describes operations in both Dubai and Abu Dhabi, so Dubai-only location cannot be confirmed from the text provided."
+    ]
   }
 ]
