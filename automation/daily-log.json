@@ -426,5 +426,25 @@
     "skips": [
       "PK Holiday Homes | Short term rentals Dubai: The fetched website text contains only a page title ('PK Properties | Luxury Real Estate & Holiday Homes in Dubai & Abu Dhabi'). It shows no phone number, services, address, or photos, and the site describes operations in both Dubai and Abu Dhabi, so Dubai-only location cannot be confirmed from the text provided."
     ]
+  },
+  {
+    "date": "2026-11-06",
+    "path": "/best/best-office-fit-out-companies-in-dubai/",
+    "result": "too-few",
+    "source": "claude-plan",
+    "stats": {
+      "fetcher": "http",
+      "candidates": 3,
+      "sitesLoaded": 3,
+      "photosOffered": 5,
+      "accepted": 0,
+      "photoChosen": 0,
+      "withPhoto": 0
+    },
+    "skips": [
+      "GoBusiness - Dubai: GoBusiness is a business set-up and company formation consultancy (licensing, visas, banking, accounting, medical services and office leasing assistance). It does not offer office fit-out or interior works, so it is not the kind of business this guide covers.",
+      "Vista Corporate Global Business Setup - Business Setup Consultant | Company Formation Services In Dubai | UAE: Vista Corporate is a business setup and company formation consultancy (licensing, visas, accounting, corporate services). It does not offer office fit-out, interior design or build services, so it does not fit the 'Best Office Fit-Out Companies in Dubai' guide.",
+      "Spider Business Center - Business Centers in Dubai, Virtual Office, Furnished Office in Dubai and Private Office: Spider Business Center is a business centre that rents furnished, serviced, virtual and coworking offices at Conrad Business Tower, Sheikh Zayed Road. It does not describe offering office fit-out, interior design or build services, so it is not the kind of business this guide covers."
+    ]
   }
 ]
