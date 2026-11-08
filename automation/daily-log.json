@@ -446,5 +446,31 @@
       "Vista Corporate Global Business Setup - Business Setup Consultant | Company Formation Services In Dubai | UAE: Vista Corporate is a business setup and company formation consultancy (licensing, visas, accounting, corporate services). It does not offer office fit-out, interior design or build services, so it does not fit the 'Best Office Fit-Out Companies in Dubai' guide.",
       "Spider Business Center - Business Centers in Dubai, Virtual Office, Furnished Office in Dubai and Private Office: Spider Business Center is a business centre that rents furnished, serviced, virtual and coworking offices at Conrad Business Tower, Sheikh Zayed Road. It does not describe offering office fit-out, interior design or build services, so it is not the kind of business this guide covers."
     ]
+  },
+  {
+    "date": "2026-11-08",
+    "path": "/best/best-tailors-in-downtown-dubai/",
+    "result": "published",
+    "source": "search-console",
+    "stats": {
+      "fetcher": "http",
+      "candidates": 8,
+      "sitesLoaded": 7,
+      "photosOffered": 12,
+      "accepted": 6,
+      "photoChosen": 4,
+      "withPhoto": 4
+    },
+    "businesses": [
+      "Stallion Bespoke",
+      "House of Tailors",
+      "Bespoke Men's Tailor",
+      "Lapels Bespoke Tailors",
+      "Libas Legacy",
+      "The Bespoke Corner"
+    ],
+    "skips": [
+      "Bespoke Boulevard Men Tailoring Co. LLC: site did not load"
+    ]
   }
 ]

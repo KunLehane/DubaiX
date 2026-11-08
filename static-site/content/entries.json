@@ -362,5 +362,25 @@
         "title": "Business Services"
       }
     ]
+  },
+  {
+    "slug": "best-tailors-in-downtown-dubai",
+    "path": "/best/best-tailors-in-downtown-dubai/",
+    "kind": "best-list",
+    "title": "Best Tailors in Downtown Dubai: A Local Guide",
+    "description": "Six tailors in and around Downtown Dubai, covering bespoke suits, wedding tailoring, tuxedos, womenswear and alterations, with a practical tip for each.",
+    "image": "/editorial-assets/tailors-in-downtown-dubai-house-of-tailors.jpg",
+    "published": "2026-11-08",
+    "content": "pages/best-tailors-in-downtown-dubai.html",
+    "archives": [
+      {
+        "path": "/best/",
+        "title": "Best Of Dubai"
+      },
+      {
+        "path": "/best-category/tailors/",
+        "title": "Tailors"
+      }
+    ]
   }
 ]
