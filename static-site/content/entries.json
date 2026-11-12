@@ -382,5 +382,25 @@
         "title": "Tailors"
       }
     ]
+  },
+  {
+    "slug": "best-womens-bespoke-tailors-in-dubai",
+    "path": "/best/best-womens-bespoke-tailors-in-dubai/",
+    "kind": "best-list",
+    "title": "Best Bespoke Tailors for Women in Dubai",
+    "description": "Compare six women's bespoke tailors in Dubai, from business suits and evening gowns to alterations. See locations, services and what each one suits best.",
+    "image": "/editorial-assets/womens-bespoke-tailors-in-dubai-suited-and-booted-dubai.png",
+    "published": "2026-11-12",
+    "content": "pages/best-womens-bespoke-tailors-in-dubai.html",
+    "archives": [
+      {
+        "path": "/best/",
+        "title": "Best Of Dubai"
+      },
+      {
+        "path": "/best-category/womens-bespoke-tailors/",
+        "title": "Women's Bespoke Tailors"
+      }
+    ]
   }
 ]

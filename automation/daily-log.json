@@ -472,5 +472,31 @@
     "skips": [
       "Bespoke Boulevard Men Tailoring Co. LLC: site did not load"
     ]
+  },
+  {
+    "date": "2026-11-12",
+    "path": "/best/best-womens-bespoke-tailors-in-dubai/",
+    "result": "published",
+    "source": "search-console",
+    "stats": {
+      "fetcher": "http",
+      "candidates": 8,
+      "sitesLoaded": 8,
+      "photosOffered": 14,
+      "accepted": 6,
+      "photoChosen": 5,
+      "withPhoto": 5
+    },
+    "businesses": [
+      "Suited and Booted Dubai",
+      "House of Tailors",
+      "Gianna N' Giacca",
+      "Libas Legacy",
+      "Belissimo Bespoke",
+      "The Bespoke Corner"
+    ],
+    "skips": [
+      "Stallion Bespoke - Bespoke Tailor In Downtown Dubai: The website describes a bespoke tailor for men: suits, shirts, jackets and trousers, plus grooms and groomsmen wedding tailoring. It does not mention women's garments or women's clients, so it does not fit the Women's Bespoke Tailors category."
+    ]
   }
 ]
