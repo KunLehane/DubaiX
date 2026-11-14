@@ -402,5 +402,25 @@
         "title": "Women's Bespoke Tailors"
       }
     ]
+  },
+  {
+    "slug": "best-tailors-in-dubai-marina",
+    "path": "/best/best-tailors-in-dubai-marina/",
+    "kind": "best-list",
+    "title": "Best Tailors in Dubai Marina: 5 Options Compared",
+    "description": "Find the best tailors in Dubai Marina, from bespoke suits and wedding wear to quick alterations. Compare five studios and see what each one is good for.",
+    "image": "/editorial-assets/tailors-in-dubai-marina-the-sewing-corner.webp",
+    "published": "2026-11-14",
+    "content": "pages/best-tailors-in-dubai-marina.html",
+    "archives": [
+      {
+        "path": "/best/",
+        "title": "Best Of Dubai"
+      },
+      {
+        "path": "/best-category/tailors/",
+        "title": "Tailors"
+      }
+    ]
   }
 ]

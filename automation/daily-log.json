@@ -498,5 +498,32 @@
     "skips": [
       "Stallion Bespoke - Bespoke Tailor In Downtown Dubai: The website describes a bespoke tailor for men: suits, shirts, jackets and trousers, plus grooms and groomsmen wedding tailoring. It does not mention women's garments or women's clients, so it does not fit the Women's Bespoke Tailors category."
     ]
+  },
+  {
+    "date": "2026-11-14",
+    "path": "/best/best-tailors-in-dubai-marina/",
+    "result": "published",
+    "source": "search-console",
+    "stats": {
+      "fetcher": "http",
+      "candidates": 8,
+      "sitesLoaded": 6,
+      "photosOffered": 12,
+      "accepted": 5,
+      "photoChosen": 4,
+      "withPhoto": 4
+    },
+    "businesses": [
+      "My Tailor & Little Things",
+      "The Sewing Corner",
+      "Santoba Tailors & Co",
+      "Royal Ascot Windsor",
+      "Kachins Couture"
+    ],
+    "skips": [
+      "Dar Al Zaman Mens Tailoring: site did not load",
+      "Tailor Dubai Marina & Embroidery Ателье ремонт пошив одежды и Вышивки: site did not load",
+      "ASCOTS AND CHAPELS (MARINA MALL): The website text does not show a Dubai Marina location. The only address detail is a P.O. Box (74984) with no district or street, and the 'Locations' page content is not included in the fetched text. The Marina Mall reference comes from the listing name, not the site, so the location cannot be confirmed from the website."
+    ]
   }
 ]
