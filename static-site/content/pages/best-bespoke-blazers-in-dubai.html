@@ -1,0 +1,391 @@
+<main id="primary" class="dx-single-best-list">
+<style>
+/* ═══ BREADCRUMBS ═══ */
+.dx-breadcrumbs {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 0;
+  font-size: 0.75rem;
+  color: var(--dx-mid-grey);
+  letter-spacing: 0.05em;
+}
+
+/* ═══ HERO ═══ */
+.dx-bl-hero {
+  position: relative;
+  min-height: 480px;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--dx-navy);
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+}
+.dx-bl-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(26,26,46,0.3), rgba(26,26,46,0.55) 50%, rgba(26,26,46,0.92));
+  pointer-events: none;
+}
+.dx-bl-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  width: 100%;
+}
+.dx-bl-hero h1 {
+  color: var(--dx-warm-white);
+  font-size: 4.5rem;
+  margin: 1rem 0 0.75rem;
+  line-height: 1.05;
+}
+.dx-bl-hero .section-label { color: var(--dx-gold); }
+.dx-bl-hero-meta {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.75);
+  letter-spacing: 0.06em;
+}
+.dx-bl-count-tag {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--dx-gold);
+  color: var(--dx-navy);
+  padding: 0.5rem 1rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 2px;
+}
+
+/* ═══ INTRO ═══ */
+.dx-bl-intro {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 1rem;
+}
+.dx-bl-intro p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+.dx-bl-intro p:first-of-type::first-letter {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4.5rem;
+  float: left;
+  line-height: 0.9;
+  margin: 0.4rem 0.6rem 0 0;
+  color: var(--dx-gold);
+  font-weight: 600;
+}
+
+/* ═══ METHODOLOGY ═══ */
+.dx-bl-methodology {
+  max-width: 760px;
+  margin: 0 auto 3rem;
+  padding: 0 1.5rem;
+}
+.dx-bl-methodology-box {
+  background: var(--dx-warm-white);
+  border-left: 3px solid var(--dx-gold);
+  padding: 1.5rem 1.75rem;
+}
+.dx-bl-methodology-box h2 {
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--dx-gold);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+.dx-bl-methodology-box p { margin: 0; font-size: 0.95rem; line-height: 1.7; color: var(--dx-text); }
+
+/* ═══ TABLE OF CONTENTS ═══ */
+.dx-bl-toc {
+  max-width: 760px;
+  margin: 0 auto 4rem;
+  padding: 0 1.5rem;
+}
+.dx-bl-toc-inner {
+  background: var(--dx-white);
+  border: 1px solid var(--dx-light-grey);
+  padding: 1.75rem 2rem;
+  border-radius: 2px;
+}
+.dx-bl-toc-inner h2 {
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--dx-mid-grey);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  margin: 0 0 1rem;
+}
+.dx-bl-toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  columns: 2;
+  column-gap: 2rem;
+}
+.dx-bl-toc-list li {
+  break-inside: avoid;
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
+}
+.dx-bl-toc-list a { color: var(--dx-navy); }
+.dx-bl-toc-list a:hover { color: var(--dx-gold); }
+.dx-bl-toc-num {
+  display: inline-block;
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--dx-gold);
+  font-weight: 700;
+  margin-right: 0.5rem;
+  min-width: 1.5rem;
+}
+
+/* ═══ ITEMS ═══ */
+.dx-bl-items { background: var(--dx-warm-white); padding: 2rem 0 4rem; }
+.dx-bl-item {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  display: grid;
+  grid-template-columns: 4fr 5fr 3fr;
+  gap: 2.5rem;
+  align-items: start;
+  border-bottom: 1px solid var(--dx-light-grey);
+}
+.dx-bl-item:last-child { border-bottom: none; }
+/* Grid items default to min-width: auto, which lets a large source photo's
+   natural size force its track (and the whole grid) wider than the
+   viewport. min-width: 0 lets every track shrink to the layout's actual
+   available space instead. */
+.dx-bl-item-img,
+.dx-bl-item-img-fallback,
+.dx-bl-item-content,
+.dx-bl-item-aside {
+  min-width: 0;
+}
+.dx-bl-item-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+.dx-bl-item-img-fallback {
+  width: 100%;
+  height: 420px;
+  background: var(--dx-light-grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 7rem;
+  color: var(--dx-gold);
+  font-weight: 600;
+}
+.dx-bl-item-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5rem;
+  color: var(--dx-gold);
+  font-weight: 700;
+  line-height: 0.9;
+  margin: 0 0 0.5rem;
+}
+.dx-bl-item-title {
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem;
+  line-height: 1.15;
+}
+.dx-bl-item-title a { color: var(--dx-navy); }
+.dx-bl-item-title a:hover { color: var(--dx-gold); }
+.dx-bl-item-meta {
+  font-size: 0.85rem;
+  color: var(--dx-mid-grey);
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+.dx-bl-item-desc {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--dx-text);
+  margin: 1rem 0;
+}
+.dx-bl-item-highlight {
+  background: var(--dx-white);
+  border: 1px solid var(--dx-light-grey);
+  padding: 0.85rem 1.25rem;
+  margin: 1.25rem 0;
+  font-size: 0.95rem;
+  border-left: 3px solid var(--dx-gold);
+}
+.dx-bl-item-highlight-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--dx-gold);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+.dx-bl-item-cta {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--dx-navy);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--dx-gold);
+  text-underline-offset: 4px;
+  margin-top: 1rem;
+  display: inline-block;
+}
+.dx-bl-item-cta:hover { color: var(--dx-gold); }
+
+/* Booking sidebar card per coach */
+.dx-bl-item-aside {
+  background: var(--dx-warm-white);
+  border: 1px solid var(--dx-light-grey);
+  padding: 1.75rem 1.5rem;
+  border-radius: 2px;
+  position: sticky;
+  top: 100px;
+}
+.dx-bl-aside-label {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--dx-gold);
+  margin-bottom: 0.5rem;
+}
+.dx-bl-aside-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  color: var(--dx-navy);
+  line-height: 1.2;
+}
+.dx-bl-aside-detail {
+  margin-bottom: 1rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--dx-light-grey);
+}
+.dx-bl-aside-detail-label {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dx-mid-grey);
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+.dx-bl-aside-detail-value {
+  font-size: 0.875rem;
+  color: var(--dx-text);
+  line-height: 1.4;
+}
+.dx-bl-aside-best-for {
+  background: var(--dx-white);
+  border-left: 3px solid var(--dx-gold);
+  padding: 0.6rem 0.85rem;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+.dx-bl-aside-best-for-label {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--dx-gold);
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+}
+.dx-bl-aside-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0.5rem 0 1rem;
+  padding: 0.85rem 1rem;
+}
+.dx-bl-aside-trust {
+  font-size: 0.7rem;
+  color: var(--dx-mid-grey);
+  margin: 0;
+  text-align: center;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+}
+.dx-bl-aside-no-link {
+  display: block;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--dx-mid-grey);
+  font-style: italic;
+  padding: 0.85rem 0;
+  margin-bottom: 1rem;
+  border-top: 1px solid var(--dx-light-grey);
+  border-bottom: 1px solid var(--dx-light-grey);
+}
+
+/* ═══ RELATED ═══ */
+.dx-related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Tablet - drop the booking aside below content (image left, content right, aside spans full width below) */
+@media (max-width: 1024px) {
+  .dx-bl-item {
+    grid-template-columns: 5fr 7fr;
+  }
+  .dx-bl-item-aside {
+    grid-column: 1 / -1;
+    position: static;
+    max-width: 480px;
+    margin: 0.5rem auto 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .dx-bl-hero { min-height: 380px; }
+  .dx-bl-hero h1 { font-size: 2.75rem; }
+  .dx-bl-toc-list { columns: 1; }
+  .dx-bl-item {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 3rem 1.5rem;
+  }
+  .dx-bl-item-img,
+  .dx-bl-item-img-fallback { height: 240px; }
+  .dx-bl-item-img-fallback { font-size: 4.5rem; }
+  .dx-bl-item-number { font-size: 3.5rem; }
+  .dx-bl-item-title { font-size: 1.75rem; }
+  .dx-related-grid { grid-template-columns: 1fr; }
+}
+
+.dx-jvc-guide figure{margin:0;min-width:0}.dx-jvc-guide figcaption{font-size:.75rem;margin-top:.6rem;color:var(--dx-mid-grey)}.dx-jvc-guide .dx-logo{object-fit:contain;padding:2rem;background:var(--dx-navy)}.dx-jvc-guide .dx-bl-item-aside{position:static}.dx-jvc-guide .dx-bl-item-img{height:300px}.dx-jvc-guide .dx-bl-intro p:first-of-type::first-letter{font:inherit;float:none;margin:0;color:inherit}.dx-jvc-guide .dx-bl-item-aside a{overflow-wrap:anywhere}.dx-jvc-guide .dx-bl-methodology-box h2{line-height:1.5}
+</style>
+<nav class="dx-breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/best/">Best Of Dubai</a> / Bespoke Blazers in Dubai</nav>
+<header class="dx-bl-hero" style="background-image:url('/editorial-assets/bespoke-blazers-in-dubai-suited-and-booted-dubai.png')"><div class="dx-bl-hero-overlay" aria-hidden="true"></div><div class="dx-bl-hero-inner"><span class="section-label">Dubai Tailoring Guide</span><h1>Best Bespoke Blazers in Dubai</h1><p class="dx-bl-hero-meta">Six tailors making bespoke blazers and sport jackets across the emirate, researched from their official websites.</p><span class="dx-bl-count-tag">6 local options · Updated November 2026</span></div></header>
+<section class="dx-bl-intro"><p>A well-cut blazer is one of the most useful pieces a man or woman can own, and Dubai has a strong community of tailors who make them to measure. From Al Quoz and Bur Dubai to DIFC and Business Bay, the options differ in location, service style and fabric choice. This guide brings six of them together in one place.</p><p>The businesses below are listed in no particular order. We researched each one from its official website and have not visited or tested the services in person, so check details directly before you book. Use the notes under each name to find a tailor that suits your location, schedule and style, then contact them to confirm current services.</p></section>
+<section class="dx-bl-methodology"><div class="dx-bl-methodology-box"><h2>How we chose these</h2><p>This is a researched editorial shortlist, not a ranked test, and the businesses are listed in no particular order. We checked locations, services and contact details against each business's official website in November 2026. We have not visited them in person. Confirm current opening hours, prices and availability directly with the business.</p><p>Images come from each business's own website, credited below.</p></div></section>
+<div class="dx-bl-items">
+<article class="dx-bl-item" id="pick-1"><figure><img class="dx-bl-item-img" src="/editorial-assets/bespoke-blazers-in-dubai-suited-and-booted-dubai.png" alt="Light beige suit from Suited and Booted, Dubai" loading="lazy"><figcaption>Image: <a href="https://www.suitedandbooteddubai.com/" rel="nofollow noopener" target="_blank">Suited and Booted Dubai</a>.</figcaption></figure><div class="dx-bl-item-content"><div class="dx-bl-item-number" aria-hidden="true">01</div><h2 class="dx-bl-item-title">Suited and Booted Dubai</h2><p class="dx-bl-item-meta">A good fit for: Bespoke suits and women's tailoring</p><p class="dx-bl-item-desc">Suited and Booted describes itself as a luxury bespoke tailor and ready-to-wear house with stores in Dubai and Abu Dhabi. Its bespoke service is built around made-to-measure pieces that reflect each client's taste and style, with a focus on fit, quality and detail. The site lists casual wear, tuxedos, women's tailoring and wedding attire, and says the team of style consultants and master tailors will help clients curate their wardrobe.</p><p class="dx-bl-item-desc">The process starts with a consultation covering preferences, location, climate and occasion. Clients then attend three fitting sessions with the style consultants and master tailors before collecting the finished garment. Appointments can be scheduled through the website, WhatsApp, email or phone. The Dubai store is at Goshi Warehouse City, Warehouse 8, 19D Street, Al Quoz, and is open from 10 AM to 8 PM every day.</p><h3 class="dx-bl-item-subhead">What they offer</h3><ul class="dx-bl-item-list"><li><strong>Bespoke Tailoring</strong>: Fully bespoke, made-to-measure garments designed around each client's taste, style and fit. Pieces are developed through a consultation and three fitting sessions.</li><li><strong>Tuxedos</strong>: Tuxedos are offered as a dedicated service on the website.</li><li><strong>Women's Tailoring</strong>: Tailored pieces for women, presented in their own section of the website.</li><li><strong>Wedding</strong>: Tailoring for wedding occasions, presented as a dedicated service on the website.</li></ul><h3 class="dx-bl-item-subhead">Good to know</h3><ul class="dx-bl-item-list"><li>Three fitting sessions in the bespoke process</li><li>Stores in Dubai and Abu Dhabi</li><li>Dubai store open 10 AM to 8 PM daily</li></ul><p class="dx-bl-item-meta">Google rating: 5.0 out of 5 from 923 reviews (checked November 2026).</p><p class="dx-bl-item-highlight">Book by website, WhatsApp, email or phone, and mention the climate and occasion so the consultation can cover them.</p><a class="dx-bl-item-cta" href="https://www.suitedandbooteddubai.com/" rel="nofollow noopener" target="_blank">Visit website →</a></div><aside class="dx-bl-item-aside" aria-label="Contact Suited and Booted Dubai"><span class="dx-bl-aside-label">Plan your visit</span><h3 class="dx-bl-aside-name">Suited and Booted Dubai</h3><p>Goshi Warehouse City, Warehouse 8, 19D Street, Al Quoz, Dubai, United Arab Emirates</p><p><a href="tel:+971551108854">055 110 8854</a></p><a href="https://www.suitedandbooteddubai.com/" class="dx-bl-item-cta" rel="nofollow noopener" target="_blank">Official website</a></aside></article>
+<article class="dx-bl-item" id="pick-2"><figure><img class="dx-bl-item-img" src="/editorial-assets/bespoke-blazers-in-dubai-stallion-bespoke.jpg" alt="Stallion Bespoke shears and tailoring materials on a workbench" loading="lazy"><figcaption>Image: <a href="https://stallionbespoke.com/" rel="nofollow noopener" target="_blank">Stallion Bespoke</a>.</figcaption></figure><div class="dx-bl-item-content"><div class="dx-bl-item-number" aria-hidden="true">02</div><h2 class="dx-bl-item-title">Stallion Bespoke</h2><p class="dx-bl-item-meta">A good fit for: Multiple boutiques and mill-sourced cloth</p><p class="dx-bl-item-desc">Stallion Bespoke offers made-to-measure garments for entrepreneurs, executives, diplomats and other clients who want a garment designed around them rather than selected from standard sizing. Its services cover bespoke suits, shirts, jackets and trousers, along with wedding tailoring, corporate tailoring, VIP tailoring delivered to a home, office or hotel, and refinement services. Fabrics come from mills in England and Italy, including Thomas Mason and Ermenegildo Zegna.</p><p class="dx-bl-item-desc">A visit begins with a consultation covering your profession, lifestyle and what the garment is for. Over 30 individual measurements are taken, followed by a basted draft fitting and a final refinement stage. The site states that the pattern is saved for future orders and that lifetime alteration support is included. Appointments can be requested online for the Bur Dubai, Downtown Dubai, City Walk or Jumeirah Lake Towers boutiques, and the business states that it does not charge for consultations.</p><h3 class="dx-bl-item-subhead">What they offer</h3><ul class="dx-bl-item-list"><li><strong>Bespoke Suits</strong>: Fully personalised suits tailored exclusively to your measurements, lifestyle and personal style.</li><li><strong>Bespoke Jackets</strong>: Versatile jackets designed for business, travel and leisure, balancing precision and elegance.</li><li><strong>Bespoke Shirts</strong>: Custom shirts crafted from premium cottons and linens with refined detailing throughout.</li><li><strong>Corporate Tailoring</strong>: Refined wardrobe solutions for executives, entrepreneurs, professionals and organisations seeking excellence daily.</li><li><strong>Refinement Services</strong>: Expert alterations and garment refinements executed with exceptional precision and care throughout.</li></ul><h3 class="dx-bl-item-subhead">Good to know</h3><ul class="dx-bl-item-list"><li>Four boutiques across Dubai</li><li>Over 30 individual measurements taken</li><li>Consultations not charged</li><li>Lifetime alteration support</li></ul><p class="dx-bl-item-meta">Google rating: 4.9 out of 5 from 884 reviews (checked November 2026).</p><p class="dx-bl-item-highlight">Ask which of the four Dubai boutiques is closest to you, and ask about the Italian and English mill cloths available for your jacket.</p><a class="dx-bl-item-cta" href="https://stallionbespoke.com/" rel="nofollow noopener" target="_blank">Visit website →</a></div><aside class="dx-bl-item-aside" aria-label="Contact Stallion Bespoke"><span class="dx-bl-aside-label">Plan your visit</span><h3 class="dx-bl-aside-name">Stallion Bespoke</h3><p>Bur Dubai</p><p><a href="tel:+971557451697">+971 55 745 1697</a></p><a href="https://stallionbespoke.com/" class="dx-bl-item-cta" rel="nofollow noopener" target="_blank">Official website</a></aside></article>
+<article class="dx-bl-item" id="pick-3"><figure><img class="dx-bl-item-img" src="/editorial-assets/bespoke-blazers-in-dubai-suits-and-shirts.jpg" alt="Tailor measuring a bespoke jacket at Suits &amp; Shirts, Bur Dubai" loading="lazy"><figcaption>Image: <a href="http://www.suitsandshirts.ae/" rel="nofollow noopener" target="_blank">Suits &amp; Shirts</a>.</figcaption></figure><div class="dx-bl-item-content"><div class="dx-bl-item-number" aria-hidden="true">03</div><h2 class="dx-bl-item-title">Suits &amp; Shirts</h2><p class="dx-bl-item-meta">A good fit for: Blazers, sport jackets and summer linen</p><p class="dx-bl-item-desc">Suits &amp; Shirts is a bespoke tailor based in Souk Al Kabeer, Bur Dubai. The business makes bespoke blazers and sport jackets alongside suits, shirts, trousers, tuxedos, linen suits and traditional wear. Each suit is individually drafted from a virgin paper pattern, hand-cut and assembled on-site, which the business says gives a better balance across the shoulders and posture than factory-made garments.</p><p class="dx-bl-item-desc">The service suits gentlemen who want clothing made to their own measurements, including those who prefer a visit to the tailor's own atelier or a fitting at home. Visitors can come to the Souk Al Kabeer shop, or request a traveling tailor who brings fabric to a home, office or hotel suite in DIFC, Downtown, Palm Jumeirah and Dubai Marina. The process includes body measurements, styling consultations and intermediate fittings. Appointments can be booked through the website or by phone or WhatsApp.</p><h3 class="dx-bl-item-subhead">What they offer</h3><ul class="dx-bl-item-list"><li><strong>Bespoke Blazers and Sport Jackets</strong>: Standalone bespoke blazers and sport jackets, drafted from an individual paper pattern. Each piece is assembled on-site with a floating canvas chest piece.</li><li><strong>Executive Business Suits</strong>: Two-piece and corporate business suits tailored from Super 130s to 160s natural wools. The suits are built for day-long crease resistance.</li><li><strong>Summer Linen Suits</strong>: Lightweight, unlined jackets and trousers made from pure Irish and Italian flax. They are intended for Dubai summers and outdoor events.</li><li><strong>Traveling Tailor Fittings</strong>: Concierge appointments at a home, office or hotel suite in DIFC, Downtown, Palm Jumeirah and Dubai Marina. Visits include body measurements and intermediate fittings.</li></ul><h3 class="dx-bl-item-subhead">Good to know</h3><ul class="dx-bl-item-list"><li>6 tailored shirts for 1050 AED</li><li>Traveling tailor visits across Dubai</li><li>Fabrics from European mills including Lanificio F.lli Cerruti and Thomas Mason</li></ul><p class="dx-bl-item-meta">Google rating: 4.8 out of 5 from 578 reviews (checked November 2026).</p><p class="dx-bl-item-highlight">If the Souk Al Kabeer atelier is not convenient, ask about a traveling tailor appointment at your home, office or hotel.</p><a class="dx-bl-item-cta" href="http://www.suitsandshirts.ae/" rel="nofollow noopener" target="_blank">Visit website →</a></div><aside class="dx-bl-item-aside" aria-label="Contact Suits &amp; Shirts"><span class="dx-bl-aside-label">Plan your visit</span><h3 class="dx-bl-aside-name">Suits &amp; Shirts</h3><p>A Building, Shop 3, 25C Street, Souk Al Kabeer Between BonTon and Astoria Hotel, Dubai, UAE</p><p><a href="tel:+971557558787">+97155 755 8787</a></p><a href="http://www.suitsandshirts.ae/" class="dx-bl-item-cta" rel="nofollow noopener" target="_blank">Official website</a></aside></article>
+<article class="dx-bl-item" id="pick-4"><figure><img class="dx-bl-item-img" src="/editorial-assets/bespoke-blazers-in-dubai-collars-and-cuffs.jpg" alt="Showroom interior at Collars and Cuffs, Gate Avenue Mall, DIFC" loading="lazy"><figcaption>Image: <a href="https://www.collarsandcuffs.ae/?utm_source=google&amp;utm_medium=organic&amp;utm_campaign=gmb-listing" rel="nofollow noopener" target="_blank">Collars and Cuffs</a>.</figcaption></figure><div class="dx-bl-item-content"><div class="dx-bl-item-number" aria-hidden="true">04</div><h2 class="dx-bl-item-title">Collars and Cuffs</h2><p class="dx-bl-item-meta">A good fit for: Express service and home visits</p><p class="dx-bl-item-desc">Collars and Cuffs offers made-to-measure suits, shirts, trousers, tuxedos and jackets for men who want clothing cut for them alone. The tailoring starts from each customer's measurements, posture and style, and the garment is crafted from premium fabrics by mills such as Ermenegildo Zegna and Scabal. The company says its collection includes over 5,000 fabrics, and fit is refined across personal fittings until it is right. The business suits clients who need a sharp business suit, a wedding tuxedo or everyday shirts.</p><p class="dx-bl-item-desc">A visit begins with a first consultation, which can be booked through the website's consultation form by choosing a preferred date and time between 9:00 AM and 9:00 PM. Customers can also call or email the team. Clients who need a suit urgently can ask about the express service, and members of the loyalty programme can book complimentary home and office appointments with a personal concierge. The showroom is at Unit 014, Gate Avenue Mall, Dubai International Financial Centre (DIFC), Dubai, U.A.E.</p><h3 class="dx-bl-item-subhead">What they offer</h3><ul class="dx-bl-item-list"><li><strong>Bespoke suits</strong>: Made-to-measure suits cut from the customer's measurements, posture and style. Fit is refined across personal fittings.</li><li><strong>Bespoke tuxedos</strong>: Made-to-measure tuxedos, including for wedding occasions. The team guides customers through fabric and fit choices.</li><li><strong>Bespoke shirts and trousers</strong>: Made-to-measure shirts and trousers, alongside everyday shirts for regular wear.</li><li><strong>Express service</strong>: A bespoke suit tailored urgently for an unforeseen event, according to the website.</li><li><strong>Home and office appointments</strong>: Complimentary appointments in Dubai at home or in the office, arranged by a personal concierge for loyalty programme members.</li></ul><h3 class="dx-bl-item-subhead">Good to know</h3><ul class="dx-bl-item-list"><li>Collection of over 5,000 fabrics</li><li>Fabrics from mills such as Ermenegildo Zegna and Scabal</li><li>Complimentary home and office appointments for loyalty programme members</li></ul><p class="dx-bl-item-meta">Google rating: 4.9 out of 5 from 503 reviews (checked November 2026).</p><p class="dx-bl-item-highlight">The DIFC showroom is at Gate Avenue Mall, and the concierge home and office appointments are offered to members, so ask about membership if that appeals.</p><a class="dx-bl-item-cta" href="https://www.collarsandcuffs.ae/?utm_source=google&amp;utm_medium=organic&amp;utm_campaign=gmb-listing" rel="nofollow noopener" target="_blank">Visit website →</a></div><aside class="dx-bl-item-aside" aria-label="Contact Collars and Cuffs"><span class="dx-bl-aside-label">Plan your visit</span><h3 class="dx-bl-aside-name">Collars and Cuffs</h3><p>Unit 014, Gate Avenue Mall, Dubai International Financial Centre (DIFC) Dubai, U.A.E.</p><p><a href="tel:+971563337835">+971 56 333 7835</a></p><a href="https://www.collarsandcuffs.ae/?utm_source=google&amp;utm_medium=organic&amp;utm_campaign=gmb-listing" class="dx-bl-item-cta" rel="nofollow noopener" target="_blank">Official website</a></aside></article>
+<article class="dx-bl-item" id="pick-5"><figure><img class="dx-bl-item-img" src="/editorial-assets/bespoke-blazers-in-dubai-house-of-tailors.jpg" alt="Tailored blue double-breasted suit from House of Tailors, Dubai" loading="lazy"><figcaption>Image: <a href="https://houseoftailors.co/" rel="nofollow noopener" target="_blank">House of Tailors</a>.</figcaption></figure><div class="dx-bl-item-content"><div class="dx-bl-item-number" aria-hidden="true">05</div><h2 class="dx-bl-item-title">House of Tailors</h2><p class="dx-bl-item-meta">A good fit for: Blazers, jackets and linen suits</p><p class="dx-bl-item-desc">House of Tailors is a custom tailoring business with a studio in Business Bay, Dubai. Its website lists men's and women's bespoke suits, made-to-measure suits, tuxedos, double-breasted suits, blazers and jackets, shirts and trousers, linen suits and wedding suits. The business says it works with fabric houses from Switzerland, the UK and Italy, and holds over 5,000 fabrics in-store.</p><p class="dx-bl-item-desc">A bespoke order begins with a consultation covering lifestyle, profession and preferences, followed by fabric and design selection, precision measurements, a personal pattern and fittings. The site states that bespoke suits typically take 3 to 4 weeks from consultation to delivery, while made-to-measure delivery is typically 10 to 14 days. Appointments can be booked in person, by video, or through a home or office visit with a stylist. The Dubai Business Bay studio is at Suite 710, Fifty One Tower.</p><h3 class="dx-bl-item-subhead">What they offer</h3><ul class="dx-bl-item-list"><li><strong>Bespoke suits</strong>: Custom suits made to the client's own measurements, with fabric, lapels, linings, buttons and silhouette chosen during the process. The site gives a typical timeline of 3 to 4 weeks for bespoke orders.</li><li><strong>Made-to-measure suits</strong>: A made-to-measure option for clients who want a tailored suit with a shorter wait. The site states delivery is typically 10 to 14 days.</li><li><strong>Blazers and jackets</strong>: Blazers and jackets are listed among the men's tailored products, alongside bespoke and made-to-measure suits. Women's coats and jackets are also listed on the site.</li><li><strong>Linen suits</strong>: Custom-tailored linen suits for hot weather, described on the site as breathable and suited to summer.</li><li><strong>Wedding suits</strong>: Tailored suits for weddings and special events, with a dedicated wedding suits section on the site.</li></ul><h3 class="dx-bl-item-subhead">Good to know</h3><ul class="dx-bl-item-list"><li>Over 5,000 fabrics in-store</li><li>Fabrics from Switzerland, the UK and Italy</li><li>Bespoke suits typically take 3 to 4 weeks</li><li>Made-to-measure delivery typically 10 to 14 days</li></ul><p class="dx-bl-item-meta">Google rating: 4.8 out of 5 from 429 reviews (checked November 2026).</p><p class="dx-bl-item-highlight">Choose an in-store consultation, a video appointment or a home visit with a stylist, depending on what fits your schedule.</p><a class="dx-bl-item-cta" href="https://houseoftailors.co/" rel="nofollow noopener" target="_blank">Visit website →</a></div><aside class="dx-bl-item-aside" aria-label="Contact House of Tailors"><span class="dx-bl-aside-label">Plan your visit</span><h3 class="dx-bl-aside-name">House of Tailors</h3><p>Suite 710, Fifty One Tower, Marasi Drive, Business Bay, Dubai, United Arab Emirates</p><p><a href="tel:+971509372696">+971 50 937 2696</a></p><a href="https://houseoftailors.co/" class="dx-bl-item-cta" rel="nofollow noopener" target="_blank">Official website</a></aside></article>
+<article class="dx-bl-item" id="pick-6"><figure><img class="dx-bl-item-img" src="/editorial-assets/bespoke-blazers-in-dubai-bespoke-men-s-tailor.jpg" alt="Double-breasted green check blazer by Bespoke Men's Tailor, Dubai" loading="lazy"><figcaption>Image: <a href="https://www.bespoke.ae/" rel="nofollow noopener" target="_blank">Bespoke Men's Tailor</a>.</figcaption></figure><div class="dx-bl-item-content"><div class="dx-bl-item-number" aria-hidden="true">06</div><h2 class="dx-bl-item-title">Bespoke Men's Tailor</h2><p class="dx-bl-item-meta">A good fit for: Private consultations at The Gate</p><p class="dx-bl-item-desc">Bespoke Men's Tailor offers bespoke suits, shirts and trousers, along with accessories such as ties, cufflinks, bow ties, pocket squares, belts and stud sets, which the site presents in its shop section. The business describes its tailoring as creating an entirely unique pattern from the ground up, fitted to each client's exact measurements and personal preferences rather than adjusted from standard sizes. It suits men who want a garment made around their own measurements and style, including those preparing for weddings, business occasions or formal events.</p><p class="dx-bl-item-desc">A visit begins with a private consultation with the bespoke master tailor, where clients share their preferences, choose fabrics and decide on a classic or contemporary design. The site states that the perfect fit usually requires three fittings, and that the process takes approximately four weeks on average. The boutique is on Level B1 of The Gate, Dubai International Financial Centre, Dubai. Appointments can be requested through the website or by phone, email or WhatsApp.</p><h3 class="dx-bl-item-subhead">What they offer</h3><ul class="dx-bl-item-list"><li><strong>Private Consultation</strong>: A one-on-one consultation with the bespoke master tailor to help choose the fabric, style and fit. The studio says this is tailored to each client.</li><li><strong>Bespoke Suits</strong>: Bespoke suits for wedding, business, power and gala occasions. Clients can choose from a selection of premium fabrics.</li><li><strong>Bespoke Shirts and Trousers</strong>: Bespoke shirts and trousers are offered alongside suits, with each garment created from the client's own measurements.</li><li><strong>Personalisation</strong>: Options include monogrammed initials, hand-picked linings and buttons, so that each piece reflects the client's personal style.</li></ul><h3 class="dx-bl-item-subhead">Good to know</h3><ul class="dx-bl-item-list"><li>Private consultation with the bespoke master tailor</li><li>Usually three fittings for the perfect fit</li><li>Average process of around four weeks</li></ul><p class="dx-bl-item-meta">Google rating: 4.9 out of 5 from 356 reviews (checked November 2026).</p><p class="dx-bl-item-highlight">Start with a private consultation to choose your fabric and a classic or contemporary design before the boutique fittings.</p><a class="dx-bl-item-cta" href="https://www.bespoke.ae/" rel="nofollow noopener" target="_blank">Visit website →</a></div><aside class="dx-bl-item-aside" aria-label="Contact Bespoke Men's Tailor"><span class="dx-bl-aside-label">Plan your visit</span><h3 class="dx-bl-aside-name">Bespoke Men's Tailor</h3><p>Level B1, The Gate, Dubai International Financial Centre, Dubai, United Arab Emirates</p><p><a href="tel:+97143637237">+971 4 363 7237</a></p><a href="https://www.bespoke.ae/" class="dx-bl-item-cta" rel="nofollow noopener" target="_blank">Official website</a></aside></article>
+</div>
+<section class="dx-bl-intro"><h2>What is the difference between a bespoke and a made-to-measure blazer?</h2><p>A bespoke blazer is drafted from a pattern created for one client, so it reflects their individual posture and proportions. A made-to-measure blazer starts from an existing pattern that is then adjusted to the client's measurements.</p><h2>Can a bespoke tailor in Dubai come to my home or office?</h2><p>Several of the tailors in this guide offer home, office or hotel appointments, including traveling fittings and concierge visits for members. Check each tailor's current options directly before booking.</p><h2>Do Dubai tailors make bespoke blazers for women?</h2><p>Suited and Booted offers women's tailoring, and House of Tailors makes made-to-measure and bespoke suits for both men and women. Confirm the range of women's jackets with the tailor you choose.</p><h2>What should I bring to a bespoke blazer fitting?</h2><p>Bring the shoes you plan to wear with the blazer and any shirt or accessories you will pair with it. This helps the tailor judge length, break and overall proportion more accurately.</p><p><a href="/best/">More Best Of Dubai guides</a> · <a href="/submit-listing/">Add your business</a></p></section></main>

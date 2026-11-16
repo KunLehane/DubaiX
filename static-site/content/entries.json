@@ -422,5 +422,25 @@
         "title": "Tailors"
       }
     ]
+  },
+  {
+    "slug": "best-bespoke-blazers-in-dubai",
+    "path": "/best/best-bespoke-blazers-in-dubai/",
+    "kind": "best-list",
+    "title": "Best Bespoke Blazers in Dubai: 6 Tailors to Know",
+    "description": "Compare six bespoke blazer tailors in Dubai, from Al Quoz to DIFC and Business Bay. Find where to book fittings, home visits and linen jackets.",
+    "image": "/editorial-assets/bespoke-blazers-in-dubai-suited-and-booted-dubai.png",
+    "published": "2026-11-16",
+    "content": "pages/best-bespoke-blazers-in-dubai.html",
+    "archives": [
+      {
+        "path": "/best/",
+        "title": "Best Of Dubai"
+      },
+      {
+        "path": "/best-category/bespoke-blazers/",
+        "title": "Bespoke Blazers"
+      }
+    ]
   }
 ]

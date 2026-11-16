@@ -525,5 +525,29 @@
       "Tailor Dubai Marina & Embroidery Ателье ремонт пошив одежды и Вышивки: site did not load",
       "ASCOTS AND CHAPELS (MARINA MALL): The website text does not show a Dubai Marina location. The only address detail is a P.O. Box (74984) with no district or street, and the 'Locations' page content is not included in the fetched text. The Marina Mall reference comes from the listing name, not the site, so the location cannot be confirmed from the website."
     ]
+  },
+  {
+    "date": "2026-11-16",
+    "path": "/best/best-bespoke-blazers-in-dubai/",
+    "result": "published",
+    "source": "search-console",
+    "stats": {
+      "fetcher": "http",
+      "candidates": 8,
+      "sitesLoaded": 8,
+      "photosOffered": 14,
+      "accepted": 6,
+      "photoChosen": 6,
+      "withPhoto": 6
+    },
+    "businesses": [
+      "Suited and Booted Dubai",
+      "Stallion Bespoke",
+      "Suits & Shirts",
+      "Collars and Cuffs",
+      "House of Tailors",
+      "Bespoke Men's Tailor"
+    ],
+    "skips": []
   }
 ]
