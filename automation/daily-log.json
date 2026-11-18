@@ -549,5 +549,21 @@
       "Bespoke Men's Tailor"
     ],
     "skips": []
+  },
+  {
+    "date": "2026-11-18",
+    "path": "/best/best-corporate-tailors-in-dubai/",
+    "result": "too-few",
+    "source": "search-console",
+    "stats": {
+      "fetcher": "http",
+      "candidates": 3,
+      "sitesLoaded": 3,
+      "photosOffered": 5,
+      "accepted": 0,
+      "photoChosen": 0,
+      "withPhoto": 0
+    },
+    "skips": []
   }
 ]
