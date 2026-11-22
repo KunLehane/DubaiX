@@ -583,5 +583,21 @@
     "skips": [
       "Vogue Fitness | JLT: The URL given (vfuae.com/vogue-fitness-jlt/) returns a 404 error graphic in the fetched photos, so the page is broken. The text provided also comes from the wider site and footer, not a working JLT page."
     ]
+  },
+  {
+    "date": "2026-11-22",
+    "path": "/best/best-tailors-in-business-bay/",
+    "result": "too-few",
+    "source": "search-console",
+    "stats": {
+      "fetcher": "http",
+      "candidates": 1,
+      "sitesLoaded": 1,
+      "photosOffered": 2,
+      "accepted": 0,
+      "photoChosen": 0,
+      "withPhoto": 0
+    },
+    "skips": []
   }
 ]
