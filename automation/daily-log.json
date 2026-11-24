@@ -599,5 +599,21 @@
       "withPhoto": 0
     },
     "skips": []
+  },
+  {
+    "date": "2026-11-24",
+    "path": "/best/best-tuxedo-tailors-in-dubai/",
+    "result": "too-few",
+    "source": "search-console",
+    "stats": {
+      "fetcher": "http",
+      "candidates": 3,
+      "sitesLoaded": 3,
+      "photosOffered": 6,
+      "accepted": 0,
+      "photoChosen": 0,
+      "withPhoto": 0
+    },
+    "skips": []
   }
 ]
