@@ -631,5 +631,23 @@
       "withPhoto": 0
     },
     "skips": []
+  },
+  {
+    "date": "2026-11-28",
+    "path": "/best/best-tuxedo-tailors-in-downtown-dubai/",
+    "result": "too-few",
+    "source": "search-console",
+    "stats": {
+      "fetcher": "http",
+      "candidates": 3,
+      "sitesLoaded": 3,
+      "photosOffered": 3,
+      "accepted": 0,
+      "photoChosen": 0,
+      "withPhoto": 0
+    },
+    "skips": [
+      "W Couturier - Handmade Luxury Suits: No phone number is shown on the website, so the listing cannot be published."
+    ]
   }
 ]
